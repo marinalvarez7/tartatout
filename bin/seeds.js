@@ -8,8 +8,8 @@ require('dotenv').config({
 });
 
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const User = require("../models/User");
+const bcrypt = require("bcryptjs");
+const bin = require ("bin");
 
 const bcryptSalt = 10;
 
@@ -23,7 +23,7 @@ const bcryptSalt = 10;
     // User
     //
 
-    let users = await User.create([
+    let Recipe = await Recipe.create([
       {
         username: "alice",
         password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
@@ -33,7 +33,7 @@ const bcryptSalt = 10;
         password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
       }
     ]);
-    console.log(`${users.length} users created`);
+    console.log(`${recipes.length} recipes created`);
     
     await mongoose.disconnect();
   } catch(e) {

@@ -10,7 +10,7 @@ const path         = require('path');
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 
-const app_name = require('./package.json').name; // "lab-profile-app"
+const app_name = require('./package.json').name; // "tartatout"
 
 mongoose
   .connect((process.env.MONGODB_URI ||`mongodb://localhost/${app_name}`), {useNewUrlParser: true})
