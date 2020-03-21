@@ -22664,23 +22664,7 @@
             }
         ],
         "originalId": null
-    },
-    {
-        "vegetarian": false,
-        "vegan": false,
-        "glutenFree": false,
-        "dairyFree": false,
-        "veryHealthy": false,
-        "cheap": false,
-        "veryPopular": true,
-        "sustainable": false,
-        "weightWatcherSmartPoints": 12,
-        "gaps": "no",
-        "lowFodmap": false,
-        "preparationMinutes": 20,
-        "cookingMinutes": 10,
-        "sourceUrl": "http://www.apronstringsblog.com/one-pot-wonder-tomato-basil-pasta-recipe/",
-        "spoonacularSourceUrl": "https://spoonacular.com/one-pot-wonder-tomato-basil-pasta-666437",
-        "aggregateLikes": 148859,
-        "spoonacularScore": 91,
+    }
+
+]
      

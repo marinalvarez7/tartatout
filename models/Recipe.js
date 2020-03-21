@@ -1,23 +1,25 @@
-const mongoose = require('mongoose');
-const Schema   = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const recipeSchema = new Schema({
-  ingredients: { 
+const recipeSchema = new Schema(
+	{
       title: String,
-      readyInMinutes: Number,
       image: String,
-      step: ,
-      ingredients : [],
-      amount : Number,
-
-  },
-  
-}, {
-  timestamps: {
-    createdAt: 'created_at',
-    updatedAt: 'updated_at'
-  }
-});
-
-const Recipe = mongoose.model('Recipe', recipeSchema);
+      readyInMinutes: Number,
+      preparationTime: Number,
+      cookingTime: Number,
+      servings: Number,
+      ingredients: [],
+      amount: [],
+      unit: [],
+			steps: []
+	},
+	{
+		timestamps: {
+			createdAt: "created_at",
+			updatedAt: "updated_at"
+		}
+	}
+);
+const Recipe = mongoose.model("Recipe", recipeSchema);
 module.exports = Recipe;

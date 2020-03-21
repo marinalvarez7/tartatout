@@ -8,36 +8,77 @@ require('dotenv').config({
 });
 
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-const bin = require ("bin");
+const json = require ("./data.json");
+const Recipe = require ("../models/Recipe");
+const User = require ("../models/User");
 
-const bcryptSalt = 10;
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
-(async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+//mongoose.connection.db.dropDatabase();
 
-    await mongoose.connection.db.dropDatabase();
+const recipes = json.map(complexrecipe => {
+  //console.log('çomplexrecipe=', complexrecipe.analyzedInstructions[0].steps)
 
-    //
-    // User
-    //
-
-    let Recipe = await Recipe.create([
-      {
-        username: "alice",
-        password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
-      },
-      {
-        username: "bob",
-        password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
-      }
-    ]);
-    console.log(`${recipes.length} recipes created`);
-    
-    await mongoose.disconnect();
-  } catch(e) {
-    console.error(e);
-    process.exit(1);
+  let steps;
+  if (complexrecipe.analyzedInstructions[0]) {
+    steps = complexrecipe.analyzedInstructions[0].steps.map(complexstep => {
+      //console.log("coucou", complexstep.step)
+      return complexstep.step;
+    })
+  } else {
+    steps = []
   }
-})();
+
+  let ingredients;
+  if (complexrecipe.extendedIngredients) {
+    ingredients = complexrecipe.extendedIngredients.map(complexIngredients => {
+      // console.log("coucou", complexIngredients.name)
+      return complexIngredients.name;
+    })
+  } else {
+    ingredients = []
+  }
+
+  let amount;
+  if (complexrecipe.extendedIngredients) {
+    amount = complexrecipe.extendedIngredients.map(complexAmount => {
+      console.log("coucou", complexAmount.measures.metric.amount)
+      return complexAmount.measures.metric.amount;
+    })
+  } else {
+    amount = []
+  }
+
+  let unit;
+  if (complexrecipe.extendedIngredients) {
+    unit = complexrecipe.extendedIngredients.map(complexUnit => {
+      console.log("coucou", complexUnit.measures.metric.unitShort)
+      return complexUnit.measures.metric.unitShort;
+    })
+  } else {
+    unit = []
+  }
+
+  return {
+    title: complexrecipe.title,
+    image: complexrecipe.image,
+    steps: steps,
+    readyInMinutes: complexrecipe.readyInMinutes,
+    preparationTime: complexrecipe.preparationMinutes,
+    cookingTime: complexrecipe.cookingMinutes,
+    servings: complexrecipe.servings,
+    ingredients: ingredients,
+    amount: amount,
+    unit: unit
+  }
+});
+
+console.log('recipes=', recipes)
+
+Recipe.create(recipes, (err) => {
+  if (err) { throw(err) }
+  console.log(`Created ${json.length} recipes`);
+
+  mongoose.disconnect();
+});
+
