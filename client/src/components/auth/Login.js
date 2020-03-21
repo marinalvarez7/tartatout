@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 import Popin from '../Popin.js';
 import authService from './auth-service.js';
+import Button from '@material-ui/core/Button';
 
 export default class extends React.Component {
   state = {
@@ -35,8 +36,10 @@ export default class extends React.Component {
   render() {
     return (
       <Popin one={(
-        <>
-          <h1>Log in</h1>
+        <> 
+          <Button variant="contained" color="secondary">
+          LOGIN  
+          </Button>
           
           <form onSubmit={this.handleSubmit}>
 
@@ -62,18 +65,6 @@ export default class extends React.Component {
 
           <p>
             <small>If you don't have an account yet, you can create your account <Link to="/signup">here</Link></small>
-          </p>
-        </>
-      )} two={(
-        <>
-          <p>
-            <strong>Hello!!</strong>
-            Awesome to have at IronProfile again!
-          </p>
-          
-          <p>
-            <small>If you login, you agree with all our terms and conditions where we can do whatever we want with the data!</small>
-            <button className="btn" onClick={this.handleSubmit}>Log in</button>
           </p>
         </>
       )} />

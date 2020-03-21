@@ -12,9 +12,6 @@ export default (props) => {
       ) : (
         <Popin one={(
           <>
-            <h1>IronProfile</h1>
-            <p>Today we will create an app with authorization, adding some cool styles !</p>
-
             <div className="cta">
               <Link className="btn" to="/signup">Sign up</Link>
               <Link className="btn" to="/login">Log in</Link>
