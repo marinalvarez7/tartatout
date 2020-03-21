@@ -44,8 +44,13 @@ app.use(session({
 }))
 require('./passport')(app);
 
+// routes auth et recipes
+
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
+
+const recipesRoutes = require('./routes/recipes');
+app.use ('/', recipesRoutes);
 
 //
 // After routes: static server || React SPA
