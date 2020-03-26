@@ -34,27 +34,45 @@ router.get("/recipes/random", (req, res, next) => {
   // route sur homepage pour mettre en avant des recettes de manière aléatoire
 });
 
-// router.get("/recipe/custom", (req, res, next) => {
-//   Recipe.findOne({ _id: req.params.id })
-//     .then(recipe => res.json(recipe))
+// GET /recipes?ingredient=flour&ingredient=chicken
+router.get("/recipes", (req, res, next) => {
+
+  console.log('req.query=', req.query)
+
+  let askedIngredients = req.query.ingredients;
+
+  let query = {};
+
+  if (askedIngredients.length > 0) {
+    query.ingredients = { $all: askedIngredients };
+  }
+
+  Recipe.find(query)
+    .then(recipes => res.json(recipes))
+    .catch(err => next(err))
+});
+
+// router.get("/recipes", (req, res, next) => {
+//   Recipe.find({ ingredients: { $all: [req.query.ingredients] } })
+//     .then(recipes => res.json(recipes.title))
 //     .catch(err => next(err))
-// ;
+// });
 
 // router.post("recipe/custom", (req, res, next) => {
 //   Recipe.findOne({ _id: req.params.id })
 //     .then(recipe => res.redirect())
 //     .catch(err => next(err))
 //     ;
-  //cette route merdouille ; à reprendre entre le get et post 
+//cette route merdouille ; à reprendre entre le get et post 
 
 
-  //faire un formulaire pour sélectionner les ingrédients : faire une requete post avec req.body
+//faire un formulaire pour sélectionner les ingrédients : faire une requete post avec req.body
 
 
-  //route qui permet quand on choisit les ingrédients de filtrer les recettes
-  // à mettre sur la route recipe
-  //vérifier ; faire un composant show les recipes (4ème page du figma)
-});
+//route qui permet quand on choisit les ingrédients de filtrer les recettes
+// à mettre sur la route recipe
+//vérifier ; faire un composant show les recipes (4ème page du figma)
+// });
 
 router.get("/recipes/:id", (req, res, next) => {
   Recipe.findOne({ '_id': req.params.id })
