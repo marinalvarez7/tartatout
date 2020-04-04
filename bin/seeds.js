@@ -10,7 +10,6 @@ require('dotenv').config({
 const mongoose = require("mongoose");
 const json = require ("./data.json");
 const Recipe = require ("../models/Recipe");
-const User = require ("../models/User");
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 

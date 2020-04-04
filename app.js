@@ -23,17 +23,13 @@ mongoose
 
 const app = express();
 
+
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-const cors = require('cors');
-app.use(cors({
-  credentials: true,
-  origin: ['http://localhost:3000']
-}));
 
 // Enable authentication using session + passport
 app.use(session({
@@ -43,6 +39,13 @@ app.use(session({
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }))
 require('./passport')(app);
+
+const cors = require('cors');
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:3000']
+}));
+
 
 // routes auth et recipes
 
