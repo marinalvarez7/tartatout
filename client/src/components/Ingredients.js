@@ -1,325 +1,345 @@
-import React, { Component } from 'react';
+import React, { Ingredients } from "react";
+
+import { Link, Redirect } from 'react-router-dom';
+
+import Footer from './Footer';
+import NavBar from './NavBar';
+
+
 
 const ingredients = [
-  {name: "chicken",
-  image:'/poulet.jpg',
-  }, 
   {
-  name: 'lamb',
-  image:'/lamb.jpg',
-  }, 
-  {
-  name: 'apple',
-  image:'/apple.png',
+    name: "chicken",
+    image: '/poulet.jpg',
   },
   {
-  name: 'broccoli',
-  image:'/brocolis.jpg',
+    name: 'lamb',
+    image: '/lamb.jpg',
   },
   {
-  name: 'potatoe',
-  image:'/monsieurPatate.jpg',
+    name: 'apple',
+    image: '/apple.png',
   },
   {
-  name: 'sardine',
-  image:'/sardine.jpg',
+    name: 'broccoli',
+    image: '/brocolis.jpg',
   },
   {
-  name: 'eggplant',
-  image:'/eggplant.jpg',
+    name: 'potatoe',
+    image: '/monsieurPatate.jpg',
   },
   {
-  name: 'eggs',
-  image:'/eggs.jpg',
+    name: 'sardine',
+    image: '/sardine.jpg',
   },
   {
-  name: 'tomatoes',
-  image:'/tomatoes.jpg',
+    name: 'eggplant',
+    image: '/eggplant.jpg',
   },
   {
-  name: 'onion',
-  image:'/onions.jpg',
+    name: 'eggs',
+    image: '/eggs.jpg',
   },
   {
-  name: 'butter',
-  image:'/butter.jpg',
+    name: 'tomatoes',
+    image: '/tomatoes.jpg',
+  },
+  {
+    name: 'onion',
+    image: '/onions.jpg',
+  },
+  {
+    name: 'butter',
+    image: '/butter.jpg',
   },
   {
     name: 'cheese',
-    image:'/cheese.jpg',
+    image: '/cheese.jpg',
   },
   {
     name: 'flour',
-    image:'/flour.jpg',
+    image: '/flour.jpg',
   },
   {
     name: 'garlic',
-    image:'/garlic.jpg',
+    image: '/garlic.jpg',
   },
   {
     name: 'oil',
-    image:'/oil.jpg',
+    image: '/oil.jpg',
   },
   {
     name: 'mozzarella',
-    image:'/mozzarella.jpg',
+    image: '/mozzarella.jpg',
   },
   {
     name: 'spinach',
-    image:'/spinach.jpg',
+    image: '/spinach.jpg',
   },
   {
     name: 'wine',
-    image:'/wines.jpg',
+    image: '/wines.jpg',
   },
   {
     name: 'parmesan',
-    image:'/parmesan.jpg',
+    image: '/parmesan.jpg',
   },
   {
     name: 'beans',
-    image:'/beans.jpg',
+    image: '/beans.jpg',
   },
   {
     name: 'carrot',
-    image:'/carrots.jpg',
+    image: '/carrots.jpg',
   },
   {
     name: 'celery',
-    image:'/celery.jpg',
+    image: '/celery.jpg',
   },
   {
     name: 'sherry',
-    image:'/sherry.jpg',
+    image: '/sherry.jpg',
   },
   {
     name: 'vinegar',
-    image:'/vinegar.jpg',
+    image: '/vinegar.jpg',
   },
   {
     name: 'sugar',
-    image:'/sugar.jpg',
+    image: '/sugar.jpg',
   },
   {
     name: 'cranberries',
-    image:'/cranberries.jpg',
+    image: '/cranberries.jpg',
   },
   {
     name: 'mushroom',
-    image:'/mushrooms.jpg',
+    image: '/mushrooms.jpg',
   },
   {
     name: 'prosciutto',
-    image:'/prosciutto.jpg',
+    image: '/prosciutto.jpg',
   },
   {
     name: 'curry',
-    image:'/curry.jpg',
+    image: '/curry.jpg',
   },
   {
     name: 'soy sauce',
-    image:'/soySauce.jpg',
+    image: '/soySauce.jpg',
   },
   {
     name: 'mustard',
-    image:'/mustard.jpg',
+    image: '/mustard.jpg',
   },
   {
     name: 'ham',
-    image:'/ham.jpg',
+    image: '/ham.jpg',
   },
   {
     name: 'honey',
-    image:'/honey.jpg',
+    image: '/honey.jpg',
   },
   {
     name: 'beef',
-    image:'',
+    image: '',
   },
   {
     name: 'chives',
-    image:'/chives.jpg',
+    image: '/chives.jpg',
   },
   {
     name: 'oranges',
-    image:'/oranges.jpg',
+    image: '/oranges.jpg',
   },
   {
     name: 'shallots',
-    image:'',
+    image: '',
   },
   {
     name: 'anchovy',
-    image:'/anchovies.jpg',
+    image: '/anchovies.jpg',
   },
   {
     name: 'chili',
-    image:'/chili.jpg',
+    image: '/chili.jpg',
   },
   {
     name: 'apricot',
-    image:'/apricot.jpg',
+    image: '/apricot.jpg',
   },
   {
     name: 'almond',
-    image:'/almond.jpg',
+    image: '/almond.jpg',
   },
   {
     name: 'lemon',
-    image:'/lemon.jpg',
+    image: '/lemon.jpg',
   },
   {
     name: 'peach',
-    image:'/peach.jpg',
+    image: '/peach.jpg',
   },
   {
     name: 'masala',
-    image:'/masala.jpg',
+    image: '/masala.jpg',
   },
   {
     name: 'turmeric',
-    image:'/turmeric.jpg',
+    image: '/turmeric.jpg',
   },
   {
     name: 'avocado',
-    image:'/avocado.jpg',
+    image: '/avocado.jpg',
   },
   {
     name: 'lentils',
-    image:'/lentils.jpg',
+    image: '/lentils.jpg',
   },
   {
     name: 'yogurt',
-    image:'/yogurt.jpg',
+    image: '/yogurt.jpg',
   },
   {
     name: 'enchilada sauce',
-    image:'/enchilada-sauce.jpg',
+    image: '/enchilada-sauce.jpg',
   },
   {
     name: 'lime',
-    image:'/lime.jpg',
+    image: '/lime.jpg',
   },
   {
     name: 'arugula',
-    image:'/arugula.jpg',
+    image: '/arugula.jpg',
   },
   {
     name: 'crab',
-    image:'/crab.jpg',
+    image: '/crab.jpg',
   },
   {
     name: 'lettuce',
-    image:'/lettuce.jpg',
+    image: '/lettuce.jpg',
   },
   {
     name: 'radish',
-    image:'/radish.jpg',
+    image: '/radish.jpg',
   },
   {
     name: 'romaine',
-    image:'/romaine.jpg',
+    image: '/romaine.jpg',
   },
   {
     name: 'rum',
-    image:'/rum.jpg',
+    image: '/rum.jpg',
   },
   {
     name: 'sour cream',
-    image:'/sourCream.jpg',
+    image: '/sourCream.jpg',
   },
   {
     name: 'bacon',
-    image:'/bacon.jpg',
+    image: '/bacon.jpg',
   },
   {
     name: 'mayonnaise',
-    image:'/mayonnaise.jpg',
+    image: '/mayonnaise.jpg',
   },
   {
     name: 'jalapeño',
-    image:'/jalapeño',
+    image: '/jalapeño',
   },
   {
     name: 'cider',
-    image:'/cider.jpg',
+    image: '/cider.jpg',
   },
   {
     name: 'date',
-    image:'/date.jpg',
+    image: '/date.jpg',
   },
   {
     name: 'raisins',
-    image:'/raisins.jpg',
+    image: '/raisins.jpg',
   },
   {
     name: 'granola',
-    image:'/granola.jpg',
+    image: '/granola.jpg',
   },
   {
     name: 'vanilla',
-    image:'/vanilla.jpg',
+    image: '/vanilla.jpg',
   },
   {
     name: 'coconut',
-    image:'/coconut.jpg',
+    image: '/coconut.jpg',
   },
   {
     name: 'puff pastry',
-    image:'/puff-pastry.jpg',
+    image: '/puff-pastry.jpg',
   },
   {
     name: 'mint',
-    image:'/mint.jpg',
+    image: '/mint.jpg',
   },
   {
     name: 'chickpeas',
-    image:'/chickpeas.jpg',
+    image: '/chickpeas.jpg',
   },
   {
     name: 'oregano',
-    image:'/oregano.jpg',
+    image: '/oregano.jpg',
   },
   {
-    name:'tahini',
-    image:'/tahini.jpg',
+    name: 'tahini',
+    image: '/tahini.jpg',
   },
   {
-    name:'macaroni',
-    image:'/macaroni.jpg',
+    name: 'macaroni',
+    image: '/macaroni.jpg',
   },
   {
-    name:'zucchini',
-    image:'/zucchini.jpg',
+    name: 'zucchini',
+    image: '/zucchini.jpg',
   },
   {
-    name:'linguine',
-    image:'/linguine.jpg',
+    name: 'linguine',
+    image: '/linguine.jpg',
   },
   {
-    name:'tortellini',
-    image:'/tortellini.jpg',
+    name: 'tortellini',
+    image: '/tortellini.jpg',
   }
-    ]
-class Ingredients extends Component {
-  state = { 
-    ingredients: ingredients
-    }
+]
 
+
+
+
+export default class extends React.Component {
+
+  state = {
+    ingredients: ingredients
+  }
 
   render() {
     return (
+      <>
+        <NavBar />
+
+        <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
+
         <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
-                <div>
-                    <div>{ingredient.name}
-                    <img src={ingredient.image}/></div>
-                </div>
-            )
+            <div>
+              <div>{ingredient.name}
+                <img src={ingredient.image} /></div>
+            </div>
+          )
           )}
         </div>
-    )
-  }
-}  
 
-export default Ingredients;
+        <Footer />
+      </>
+
+    );
+  }
+}
+

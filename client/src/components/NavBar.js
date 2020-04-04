@@ -1,3 +1,9 @@
+import React, { NavBar } from "react";
+
+import { Link, Redirect } from 'react-router-dom';
+
+// import logoTartatout from '../../public/logoTartatout.png';
+
 export default class extends React.Component {
   render() {
     return (
@@ -6,7 +12,7 @@ export default class extends React.Component {
           <nav className="navbar">
             <div className="container">
               <div className="navbar-brand">
-                <img src={logoTartatout} alt="Logo" />
+                {/* <img src={logoTartatout} alt="Logo" /> */}
                 <span className="navbar-burger burger" data-target="navbarMenuHeroA">
                   <span></span>
                   <span></span>
@@ -22,9 +28,10 @@ export default class extends React.Component {
                   <a className="navbar-item"><Link to="/login">Log in</Link></a>
                 </div>
               </div>
+            </div>
           </nav>
         </div>
       </>
-      );
+    );
   }
 }

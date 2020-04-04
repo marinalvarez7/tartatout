@@ -1,10 +1,11 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import Popin from '../Popin.js';
 import authService from './auth-service.js';
-import Button from '@material-ui/core/Button';
+
+import Footer from '../Footer';
+import NavBar from '../NavBar';
 
 export default class extends React.Component {
   state = {
@@ -19,55 +20,61 @@ export default class extends React.Component {
 
     authService.login(this.state.username, this.state.password)
       .then(response => {
-        this.setState({error: ""});
+        this.setState({ error: "" });
 
         this.props.updateUser(response);
         this.props.history.push('/');
       })
-      .catch(err => this.setState({error: err.response.data.message}))
-    ;
+      .catch(err => this.setState({ error: err.response.data.message }))
+      ;
   }
 
   handleChange = (event) => {
-    const {name, value} = event.target;
-    this.setState({[name]: value});
-  } 
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
 
   render() {
     return (
-      <Popin one={(
-        <> 
-          <Button variant="contained" color="secondary">
-          LOGIN  
-          </Button>
-          
-          <form onSubmit={this.handleSubmit}>
+      <>
 
-            {this.state.error && (
-              <p className="error">{this.state.error}</p>
-            )}
+        <NavBar />
 
-            <p>
-              <label>
-                <em>Username</em>
-                <input type="text" name="username" value={this.state.username} onChange={this.handleChange} />
-              </label>
+        <h1 className= "title is-1 has-text-centered">Login</h1>
+
+        <form onSubmit={this.handleSubmit}>
+
+          {this.state.error && (
+            <p className="error">{this.state.error}</p>
+          )}
+
+          <div className="field">
+            <p className="control">
+              <input className="input" type="email" placeholder="Email" value={this.state.username} onChange={this.handleChange}></input>
             </p>
+          </div>
 
-            <p>
-              <label>
-                <em>Password</em>
-                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </label>
+          <div className="field">
+            <p className="control">
+              <input className="input" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
             </p>
+          </div>
 
-          </form>
+          <div className="field">
+            <p className="control">
+              <button className="button is-success">
+                Login
+              </button>
+            </p>
+          </div>
+        </form>
 
-          <p>
-            <small>If you don't have an account yet, you can create your account <Link to="/signup">here</Link></small>
-          </p>
-        </>
-      )} />
+        <p>
+          <small>If you don't have an account yet, you can create your account <Link to="/signup">here</Link></small>
+        </p>
+
+        <Footer />
+      </>
     );
   }
 }

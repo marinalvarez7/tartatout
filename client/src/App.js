@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
 
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import Homepage from './components/auth/Homepage.js'
+import Homepage from './components/Homepage.js'
 import Signup from './components/auth/Signup.js';
 import Login from './components/auth/Login.js';
 import Profile from './components/auth/Profile.js';
@@ -21,16 +21,16 @@ class App extends Component {
   fetchUser = () => {
     if (!this.state.user._id) {
       authService.loggedin()
-        .then(data => this.setState({user: data}))
-        .catch(err => this.setState({user: {}}))
-      ;
+        .then(data => this.setState({ user: data }))
+        .catch(err => this.setState({ user: {} }))
+        ;
     } else {
       console.log('user already in the state')
     }
   };
 
   updateUser = (data) => {
-    this.setState({user: data});
+    this.setState({ user: data });
   };
 
   componentDidMount() {
@@ -60,10 +60,10 @@ class App extends Component {
             )} />
 
             <Route exact path="/ingredients" render={(props) => (
-              <Ingredients/>
-            )} /> 
+              <Ingredients />
+            )} />
 
-            
+
             {/* <Route exact path="/recipes" render={(props) => (
               <Ingredients/>
             )} />  */}

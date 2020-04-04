@@ -1,0 +1,28 @@
+
+*, :before, :after {box-sizing:border-box;}
+
+@media (min-width:900px) {
+  :root {
+    --pad:4em;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+
+
+a {text-decoration:inherit; color:inherit;}
+
+.navbar-brand img {
+  width: 120px;
+}
+
+.hero-head {
+  padding-top: 30PX;
+}
+
+body {
+  padding-bottom: 30px;
+  scroll-padding-right: 30px;
+}
