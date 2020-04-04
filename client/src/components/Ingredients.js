@@ -1,4 +1,4 @@
-import React, { Ingredients } from "react";
+import React, {Component }from "react";
 
 import { Link, Redirect } from 'react-router-dom';
 
@@ -310,13 +310,47 @@ const ingredients = [
   }
 ]
 
+const selectedIngredients = [
+  {
+    name:'chicken',
+    image:'',
+  },
+  {
+    name:'lamb',
+    image:'',
+  },
+  {
+    name:'avocado',
+    image:'',
+  },
+  {
+    name:'apple',
+    image:'',
+  },
+  { 
+    name:'eggplant',
+    image:''
+  },
+  {
+    name:'pasta',
+    image:'',
+  },
+  { name:'peach',
+    image:'',
+  },
+  {
+   name:'yogurt',
+   image:'',
+  },
+  { 
+    name:'sardine',
+    image:'',
+  }]
 
-
-
-export default class extends React.Component {
+class Ingredients extends Component {
 
   state = {
-    ingredients: ingredients
+    selectedIngredients: selectedIngredients
   }
 
   render() {
@@ -327,11 +361,14 @@ export default class extends React.Component {
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
 
         <div className="ingredients">
-          {this.state.ingredients.map((ingredient, index) => (
+          {this.state.selectedIngredients.map((ingredient, index) => (
             <div>
-              <div>{ingredient.name}
-                <img src={ingredient.image} /></div>
+              <input type='radio' id="name" checked>
+  <label for="huey">Huey</label>>{ingredient.name}
+                <img src={ingredient.image} />
+              </input>
             </div>
+            
           )
           )}
         </div>
@@ -343,3 +380,4 @@ export default class extends React.Component {
   }
 }
 
+export default Ingredients;
