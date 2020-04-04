@@ -1,18 +1,13 @@
 import React from 'react';
 
-import { Link, Redirect } from 'react-router-dom';
-
 import Footer from './Footer';
 import NavBar from './NavBar';
-
-
 
 const Homepage = (props) => {
   return (
     <>
 
       <NavBar />
-
 
       <div className="hero-body">
         <div className="container">
