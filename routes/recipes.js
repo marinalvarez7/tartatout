@@ -4,10 +4,6 @@ const mongoose = require('mongoose');
 
 const Recipe = require("../models/Recipe");
 
-router.get('/', (req, res, next) => {
-  res.json({ message: 'welcome sur la homepage' });
-});
-
 router.get("/ingredients", (req, res, next) => {
   Recipe.find()
     .then(allTheIngredients => {
