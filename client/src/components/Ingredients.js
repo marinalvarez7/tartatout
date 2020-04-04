@@ -322,15 +322,28 @@ export default class extends React.Component {
   render() {
     return (
       <>
+
         <NavBar />
 
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
 
-        <div className="ingredients">
+        <div className="ingredients card columns is-mobile is-multiline is-centered control">
           {this.state.ingredients.map((ingredient, index) => (
-            <div>
-              <div>{ingredient.name}
-                <img src={ingredient.image} /></div>
+            <div className="card-image column is-one-quarter">
+              <figure className="image is-4by3">
+                <img src={ingredient.image} alt={ingredient.name}></img>
+              </figure>
+              <div className="card-content">
+                <div className="media">
+                  <label className="radio">
+                    <div className="media-content">
+                      <input type="radio" name="rsvp"></input>
+                      <p className="title is-4 ">{ingredient.name}</p>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
             </div>
           )
           )}
@@ -338,8 +351,6 @@ export default class extends React.Component {
 
         <Footer />
       </>
-
     );
   }
 }
-
