@@ -2,7 +2,7 @@ import React, { NavBar } from "react";
 
 import { Link, Redirect } from 'react-router-dom';
 
-// import logoTartatout from '../../public/logoTartatout.png';
+import logoTartatout from '../img/logoTartatout.png';
 
 export default class extends React.Component {
   render() {
@@ -12,7 +12,7 @@ export default class extends React.Component {
           <nav className="navbar">
             <div className="container">
               <div className="navbar-brand">
-                {/* <img src={logoTartatout} alt="Logo" /> */}
+                <img src={logoTartatout} alt="Logo" />
                 <span className="navbar-burger burger" data-target="navbarMenuHeroA">
                   <span></span>
                   <span></span>

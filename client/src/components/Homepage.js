@@ -20,10 +20,11 @@ const Homepage = (props) => {
       <div className="container has-text-centered">
         <h1 className="title">
           TARTATOUT
-                  </h1>
+        </h1>
         <h2 className="subtitle">
-          Libère le potentiel de ton frigo 😋
-                  </h2>
+            Libère le potentiel de ton frigo 😋
+        </h2>
+
       </div>
 
       <section>
