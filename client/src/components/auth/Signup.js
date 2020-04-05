@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import authService from './auth-service.js';
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 
-export default class extends React.Component {
+class Signup extends Component {
   state = {
     username: "",
     password: "",
@@ -47,7 +47,7 @@ export default class extends React.Component {
   render() {
     return (
 
-      <Fragment>
+      <div>
 
       <NavBar />
 
@@ -85,8 +85,10 @@ export default class extends React.Component {
         </p>
 
         <Footer />
-      </Fragment>
+      </div>
     
     );
   }
 }
+
+export default Signup;

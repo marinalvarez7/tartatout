@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component} from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import authService from './auth-service.js';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
 
-export default class extends React.Component {
+class Login extends Component {
   state = {
     username: "",
     password: "",
@@ -78,3 +78,5 @@ export default class extends React.Component {
     );
   }
 }
+
+export default Login;

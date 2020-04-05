@@ -1,4 +1,4 @@
-import React, { Profile } from "react";
+import React, { Component } from "react";
 
 import { Redirect } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import authService from './auth-service.js';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
 
-export default class extends React.Component {
+ class Profile extends Component {
 
   logout = (event) => {
     authService.logout()
@@ -64,3 +64,5 @@ export default class extends React.Component {
     );
   }
 }
+
+export default Profile;

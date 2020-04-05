@@ -1,6 +1,6 @@
-import React, { Footer } from "react";
+import React, { Component } from "react";
 
-export default class extends React.Component {
+ class Footer extends Component {
   render() {
     return (
         <div className="footer content has-text-centered">
@@ -12,6 +12,6 @@ export default class extends React.Component {
   }
 }
 
-
+export default Footer;
 
 

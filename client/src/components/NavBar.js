@@ -1,10 +1,10 @@
-import React, { NavBar } from "react";
+import React, { Component } from "react";
 
 import { Link, Redirect } from 'react-router-dom';
 
 import logoTartatout from '../img/logoTartatout.png';
 
-export default class extends React.Component {
+class NavBar extends Component {
   render() {
     return (
       <>
@@ -35,3 +35,5 @@ export default class extends React.Component {
     );
   }
 }
+
+export default NavBar;
