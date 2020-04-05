@@ -8,11 +8,8 @@ import axios from 'axios';
 
 
 class Recipes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { listOfRecipes: []}
-  }
-
+  state = { listOfRecipes: []}
+  
   getAllRecipes = () =>{
     axios.get(`http://localhost:5000/recipes`)
     .then(response => response.data )

@@ -12,6 +12,7 @@ import authService from './components/auth/auth-service.js';
 
 import Ingredients from './components/Ingredients.js';
 import Recipes from './components/Recipes.js';
+import RecipeDetails from './components/RecipeDetails.js';
 
 class App extends Component {
   state = {
@@ -66,6 +67,10 @@ class App extends Component {
 
             <Route exact path="/recipes" render={(props) => (
               <Recipes/>
+            )} /> 
+
+            <Route exact path="/recipes/:id" render={(props) => (
+              <RecipeDetails/>
             )} /> 
 
             {/* last route, ie: 404 */}

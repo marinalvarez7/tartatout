@@ -61,6 +61,7 @@ const recipes = json.map(complexrecipe => {
   return {
     title: complexrecipe.title,
     image: complexrecipe.image,
+    summary: complexrecipe.summary,
     steps: steps,
     readyInMinutes: complexrecipe.readyInMinutes,
     preparationTime: complexrecipe.preparationMinutes,
