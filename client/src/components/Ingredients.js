@@ -361,7 +361,6 @@ class Ingredients extends Component {
 
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
 
-<<<<<<< HEAD
         <div className="ingredients card columns is-mobile is-multiline is-centered control">
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card-image column is-one-quarter">
@@ -379,15 +378,6 @@ class Ingredients extends Component {
 
                 </div>
               </div>
-=======
-        <div className="ingredients">
-          {this.state.selectedIngredients.map((ingredient, index) => (
-            <div>
-              <input type='radio' id="name" checked>
-  <label for="huey">Huey</label>>{ingredient.name}
-                <img src={ingredient.image} />
-              </input>
->>>>>>> 2c896d59f63217e73e67c069a4ff164c391a3d95
             </div>
             
           )
@@ -398,10 +388,6 @@ class Ingredients extends Component {
       </>
     );
   }
-<<<<<<< HEAD
-}
-=======
 }
 
 export default Ingredients;
->>>>>>> 2c896d59f63217e73e67c069a4ff164c391a3d95
