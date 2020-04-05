@@ -11,7 +11,7 @@ import Profile from './components/auth/Profile.js';
 import authService from './components/auth/auth-service.js';
 
 import Ingredients from './components/Ingredients.js';
-// import Recipe from './components/Recipe.js';
+import Recipes from './components/Recipes.js';
 
 class App extends Component {
   state = {
@@ -64,9 +64,9 @@ class App extends Component {
             )} />
 
 
-            {/* <Route exact path="/recipes" render={(props) => (
-              <Ingredients/>
-            )} />  */}
+            <Route exact path="/recipes" render={(props) => (
+              <Recipes/>
+            )} /> 
 
             {/* last route, ie: 404 */}
             <Route render={() => (<h1>Not Found</h1>)} />

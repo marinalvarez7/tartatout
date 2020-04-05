@@ -4,7 +4,11 @@ const mongoose = require('mongoose');
 
 const Recipe = require("../models/Recipe");
 
+<<<<<<< HEAD
+router.get("/recipes", (req, res, next) => {
+=======
 router.get("/ingredients", (req, res, next) => {
+>>>>>>> e0b3296bd25316eb776b09beab3e3118b1747624
   Recipe.find()
     .then(allTheIngredients => {
       res.json(allTheIngredients);  // route des ingrédients. Ajouter filtrage des recettes en choisissant ingrédient. Faire un if
@@ -29,6 +33,10 @@ router.get("/recipes/random", (req, res, next) => {
   res.json('/');
   // route sur homepage pour mettre en avant des recettes de manière aléatoire
 });
+
+// router.get("/allrecipes", (req, res, next) => {
+//   res.json('/')
+// });
 
 // GET /recipes?ingredient=flour&ingredient=chicken
 router.get("/recipes", (req, res, next) => {
