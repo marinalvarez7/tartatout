@@ -69,9 +69,7 @@ class App extends Component {
               <Recipes/>
             )} /> 
 
-            <Route exact path="/recipes/:id" render={(props) => (
-              <RecipeDetails/>
-            )} /> 
+            <Route exact path="/recipes/:id" component={RecipeDetails} />
 
             {/* last route, ie: 404 */}
             <Route render={() => (<h1>Not Found</h1>)} />

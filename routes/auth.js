@@ -19,7 +19,7 @@ router.post("/signup", (req, res, next) => {
     return;
   }
 
-  User.find({ email, username }, "email" || "username", (err, user) => {
+  User.findOne({ email }, "email", (err, user) => {
     if (user !== null) {
       res.status(400).json({ message: "You are already registered, please log in" });
       return;
