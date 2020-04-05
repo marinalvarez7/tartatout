@@ -57,6 +57,9 @@ const recipes = json.map(complexrecipe => {
   } else {
     unit = []
   }
+  let ingredientsList = ingredients
+    .map((str) => str.split(" "))
+    .reduce((acc, it) => [...acc, ...it], []);
 
   return {
     title: complexrecipe.title,
@@ -68,6 +71,7 @@ const recipes = json.map(complexrecipe => {
     cookingTime: complexrecipe.cookingMinutes,
     servings: complexrecipe.servings,
     ingredients: ingredients,
+    ingredientsList: ingredientsList,
     amount: amount,
     unit: unit
   }

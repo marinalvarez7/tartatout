@@ -1,6 +1,7 @@
 import React, {Component }from "react";
+import axios from 'axios';
 
-import { Link, Redirect } from 'react-router-dom';
+// import { Link, Redirect } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -350,40 +351,64 @@ const selectedIngredients = [
 class Ingredients extends Component {
 
   state = {
-    selectedIngredients: selectedIngredients
-  }
-
+    ingredients: ingredients,
+    query: "",
+    results: [],
+  };
+  getInfo = () => {
+    axios
+      .get(`${process.env.MONGODB_URI || "http://localhost:5000"}/allrecipes`)
+      .then((response) => response.data)
+      .then((data) => {
+        console.log("data", data);
+        this.setState({ results: data });
+      })
+      .catch((err) => (err) => console.log(err));
+  };
+  handleClick = (event) => {
+    console.log(event.target.value);
+    this.setState(
+      {
+        query: event.target.value,
+      },
+      () => {
+        if (this.state.query.length > 0) {
+          this.getInfo();
+        } else {
+          this.setState({ results: [] });
+        }
+      }
+    );
+  };
   render() {
     return (
       <>
-
         <NavBar />
-
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
-
-        <div className="ingredients card columns is-mobile is-multiline is-centered control">
+        <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
-            <div className="card-image column is-one-quarter">
-              <figure className="image is-4by3">
-                <img src={ingredient.image} alt={ingredient.name}></img>
-              </figure>
-              <div className="card-content">
-                <div className="media">
-                  <label className="radio">
-                    <div className="media-content">
-                      <input type="radio" name="rsvp"></input>
-                      <p className="title is-4 ">{ingredient.name}</p>
-                    </div>
-                  </label>
-
-                </div>
-              </div>
+            <div className="card_ingredients">
+              <button onClick={this.handleClick} value={ingredient.name}>
+                {ingredient.name}
+              </button>
+              <img src={ingredient.image} alt="" />
             </div>
-            
-          )
-          )}
+          ))}
         </div>
-
+        <div className="concernedRecipes">
+          {this.state.results
+            .filter((ingredient) =>
+              ingredient.ingredientsList.includes(this.state.query)
+            )
+            .map((recipe) => {
+              return (
+                <div>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} />
+                </div>
+              );
+            })}
+        </div>
         <Footer />
       </>
     );

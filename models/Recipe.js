@@ -10,6 +10,8 @@ const recipeSchema = new Schema(
       cookingTime: Number,
       servings: Number,
       ingredients: [],
+      ingredientsList:[],
+      summary: String,
       amount: [],
       unit: [],
 			steps: []

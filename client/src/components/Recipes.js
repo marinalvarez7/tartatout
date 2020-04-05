@@ -1,6 +1,6 @@
 import React, {Component }from "react";
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -11,9 +11,9 @@ class Recipes extends Component {
   state = { listOfRecipes: []}
   
   getAllRecipes = () =>{
-    axios.get(`http://localhost:5000/recipes`)
+    axios.get(`http://localhost:5000/allrecipes`)
     .then(response => response.data )
-      .then(data=>{
+      .then(data => {
         console.log('data', data);
       this.setState({listOfRecipes:data})
     })

@@ -2,36 +2,38 @@ import React, { Component } from "react";
 // import Recipes from './Recipes.js';
 import axios from 'axios';
 
-import { Link, Redirect } from 'react-router-dom';
+
+// import { Link, Redirect } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
 
 class RecipeDetails extends Component {
-  state = {}
+  state = {recipe:{}}
 
   componentDidMount() {
-    this.getSingleRecipe();
+    axios
+    .get(`http://localhost:5000/recipes/${this.props.params.id}`)
+    .then((response) => response.data)
+    .then((data) => {
+      console.log('data', data);
+      this.setState({ recipe: data });
+    })
+    .catch((err) => (err) => console.log(err));
   }
 
-  getSingleRecipe = () => {
-    const {params} = this.props.match;
+ 
 
-    axios.get(`http://localhost:5000/recipes/${params.id}`)
-      .then(response => {
-        const theRecipe = response.data;
-        this.setState(theRecipe);
-      })
-      .catch(err => console.log(err))
-  }
   render() {
+    const recipe = this.state.recipe;
+
     return(
       <div>
         <NavBar />
 
-        <p class="title is-1 has-text-centered">{this.state.name}</p>
+        <p class="title is-1 has-text-centered">{recipe.title}</p>
 
-         <p class="title is-2 has-text-centered">{this.state.summary}<br/>
+         {/* <p class="title is-2 has-text-centered">{this.state.summary}<br/>
          {this.state.servings}<br/>
         {this.state.preparationTime} {this.state.cookingTime}</p>
 
@@ -42,7 +44,7 @@ class RecipeDetails extends Component {
 
         <p class="title is-3">Instructions</p>
 
-        <p>{this.state.steps}</p>
+        <p>{this.state.steps}</p> */}
         < Footer />
       </div>
     )

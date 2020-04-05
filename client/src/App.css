@@ -25,3 +25,50 @@ a {text-decoration:inherit; color:inherit;}
 body {
   padding-bottom: 30px;
 }
+
+.card_ingredients {
+  width: 15%;
+  margin-bottom: 15px;
+}
+.ingredients {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 15px;
+}
+.card_ingredients {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card_ingredients button {
+  min-width: 100px;
+  display: inline;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #4EB5F1;
+  text-align: center;
+  transition: all 0.2s;
+  outline: none;
+}
+.card_ingredients button:hover {
+  background-color: #4095C6;
+}
+@media all and (max-width: 30em) {
+   .card_ingredients button3 {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+.card_ingredients img {
+  max-width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
