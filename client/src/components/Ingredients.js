@@ -356,10 +356,30 @@ class Ingredients extends Component {
   render() {
     return (
       <>
+
         <NavBar />
 
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
 
+<<<<<<< HEAD
+        <div className="ingredients card columns is-mobile is-multiline is-centered control">
+          {this.state.ingredients.map((ingredient, index) => (
+            <div className="card-image column is-one-quarter">
+              <figure className="image is-4by3">
+                <img src={ingredient.image} alt={ingredient.name}></img>
+              </figure>
+              <div className="card-content">
+                <div className="media">
+                  <label className="radio">
+                    <div className="media-content">
+                      <input type="radio" name="rsvp"></input>
+                      <p className="title is-4 ">{ingredient.name}</p>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+=======
         <div className="ingredients">
           {this.state.selectedIngredients.map((ingredient, index) => (
             <div>
@@ -367,6 +387,7 @@ class Ingredients extends Component {
   <label for="huey">Huey</label>>{ingredient.name}
                 <img src={ingredient.image} />
               </input>
+>>>>>>> 2c896d59f63217e73e67c069a4ff164c391a3d95
             </div>
             
           )
@@ -375,9 +396,12 @@ class Ingredients extends Component {
 
         <Footer />
       </>
-
     );
   }
+<<<<<<< HEAD
+}
+=======
 }
 
 export default Ingredients;
+>>>>>>> 2c896d59f63217e73e67c069a4ff164c391a3d95
