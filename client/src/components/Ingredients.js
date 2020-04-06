@@ -1,4 +1,4 @@
-import React, {Component }from "react";
+import React, { Component } from "react";
 import axios from 'axios';
 
 // import { Link, Redirect } from 'react-router-dom';
@@ -313,39 +313,40 @@ const ingredients = [
 
 const selectedIngredients = [
   {
-    name:'chicken',
-    image:'',
+    name: 'chicken',
+    image: '',
   },
   {
-    name:'lamb',
-    image:'',
+    name: 'lamb',
+    image: '',
   },
   {
-    name:'avocado',
-    image:'',
+    name: 'avocado',
+    image: '',
   },
   {
-    name:'apple',
-    image:'',
-  },
-  { 
-    name:'eggplant',
-    image:''
+    name: 'apple',
+    image: '',
   },
   {
-    name:'pasta',
-    image:'',
-  },
-  { name:'peach',
-    image:'',
+    name: 'eggplant',
+    image: ''
   },
   {
-   name:'yogurt',
-   image:'',
+    name: 'pasta',
+    image: '',
   },
-  { 
-    name:'sardine',
-    image:'',
+  {
+    name: 'peach',
+    image: '',
+  },
+  {
+    name: 'yogurt',
+    image: '',
+  },
+  {
+    name: 'sardine',
+    image: '',
   }]
 
 class Ingredients extends Component {
@@ -385,13 +386,24 @@ class Ingredients extends Component {
       <>
         <NavBar />
         <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
-        <div className="ingredients">
+        <div className="ingredients card columns is-multiline is-mobile">
           {this.state.ingredients.map((ingredient, index) => (
-            <div className="card_ingredients">
-              <button onClick={this.handleClick} value={ingredient.name}>
-                {ingredient.name}
-              </button>
-              <img src={ingredient.image} alt="" />
+            <div className="card_ingredients column is-one-quarter">
+              <header class="card-header"></header>
+              <p class="card-header-title">{ingredient.name}</p>
+              <div class="card-content">
+                <div class="content">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src={ingredient.image} alt="" />
+                    </figure>
+                  </div>
+                </div>
+                <a href="#">@yummy</a> <a href="#">#{ingredient.name}</a> <a href="#">#tropbon</a>
+                <button onClick={this.handleClick} value={ingredient.name}>
+                  Got it !
+                </button>
+              </div>
             </div>
           ))}
         </div>
