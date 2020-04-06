@@ -390,19 +390,18 @@ class Ingredients extends Component {
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card_ingredients column is-one-quarter">
               <header class="card-header"></header>
-              <p class="card-header-title">{ingredient.name}</p>
+              <button class="card-header-title button is-primary is-uppercase" onClick={this.handleClick} value={ingredient.name}>
+                {ingredient.name}
+              </button>
               <div class="card-content">
                 <div class="content">
                   <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="image 128x128 is-rounded">
                       <img src={ingredient.image} alt="" />
                     </figure>
                   </div>
                 </div>
                 <a href="#">@yummy</a> <a href="#">#{ingredient.name}</a> <a href="#">#tropbon</a>
-                <button onClick={this.handleClick} value={ingredient.name}>
-                  Got it !
-                </button>
               </div>
             </div>
           ))}
