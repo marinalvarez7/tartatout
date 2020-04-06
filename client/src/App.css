@@ -18,13 +18,23 @@ a {text-decoration:inherit; color:inherit;}
   width: 120px;
 }
 
-.hero-head {
+.navbar {
   padding-top: 30PX;
 }
 
 body {
   padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
+
+.card-header{
+  text-transform: uppercase;
+  font-weight : bold;
+}
+
+
+
 
 /* .card_ingredients {
   width: 15%;
