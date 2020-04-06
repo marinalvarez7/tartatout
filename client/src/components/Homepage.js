@@ -22,7 +22,7 @@ const Homepage = (props) => {
           TARTATOUT
         </h1>
         <h2 className="subtitle">
-            Libère le potentiel de ton frigo 😋
+          Libère le potentiel de ton frigo 😋
         </h2>
 
       </div>
