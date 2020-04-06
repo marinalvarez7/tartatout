@@ -396,7 +396,7 @@ class Ingredients extends Component {
               <div class="card-content">
                 <div class="content">
                   <div class="card-image">
-                    <figure class="image 128x128 is-rounded">
+                    <figure class="image 128x128">
                       <img src={ingredient.image} alt="" />
                     </figure>
                   </div>
