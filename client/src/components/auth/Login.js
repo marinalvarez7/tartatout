@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ class Login extends Component {
 
         <NavBar />
 
-        <h1 className= "title is-1 has-text-centered">Login</h1>
+        <h1 className="title is-1 has-text-centered">Login</h1>
 
         <form onSubmit={this.handleSubmit}>
 
@@ -48,21 +48,24 @@ class Login extends Component {
             <p className="error">{this.state.error}</p>
           )}
 
-          <div className="field">
+          <label class="label">Email</label>
+          <div className="field column is-one-quarter">
             <p className="control">
-              <input className="input" type="email" placeholder="Email" value={this.state.username} onChange={this.handleChange}></input>
+              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.username} onChange={this.handleChange}></input>
             </p>
           </div>
 
-          <div className="field">
+
+          <label class="label">Password</label>
+          <div className="field column is-one-quarter">
             <p className="control">
-              <input className="input" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+              <input className="input" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
             </p>
           </div>
 
-          <div className="field">
+          <div className="field ">
             <p className="control">
-              <button className="button is-success">
+              <button className="button is-success" type="submit" value="Submit">
                 Login
               </button>
             </p>
