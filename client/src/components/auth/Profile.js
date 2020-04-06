@@ -41,7 +41,7 @@ import NavBar from '../NavBar';
               <p class="title is-1 has-text-centered">Mon profil</p>
 
               <p class="title is-3">Mon email</p>
-                  <span>{this.props.user.username}</span>
+                  <span>{this.props.user.email}</span>
   
               <div className="field">
                 <p className="control">

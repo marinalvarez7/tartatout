@@ -12,7 +12,7 @@ class NavBar extends Component {
           <nav className="navbar">
             <div className="container">
               <div className="navbar-brand">
-                <img src={logoTartatout} alt="Logo" />
+                <Link to="/"><img  src={logoTartatout} alt="Logo"/></Link>
                 <span className="navbar-burger burger" data-target="navbarMenuHeroA">
                   <span></span>
                   <span></span>
@@ -21,7 +21,6 @@ class NavBar extends Component {
               </div>
               <div id="navbarMenuHeroA" className="navbar-menu">
                 <div className="navbar-end">
-                  <a className="navbar-item is-active"><Link to="/">Home</Link></a>
                   <a className="navbar-item"><Link to="/ingredients">Mes ingrédients</Link></a>
                   <a className="navbar-item"><Link to="/recipes">Mes recettes</Link></a>
                   <a className="navbar-item"><Link to="/signup">Sign up</Link></a>

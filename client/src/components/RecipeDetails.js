@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import axios from "axios";
-import { Link, Redirect } from "react-router-dom";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
@@ -24,6 +23,15 @@ import NavBar from "./NavBar";
       <>
         <NavBar />
         <p class="title is-1 has-text-centered">{recipe.title}</p>
+        <img src={recipe.image} />
+        <p>{recipe.servings}</p>
+        <p>{recipe.readyInMinutes}</p>
+        <p>{recipe.cookingTime}</p>
+
+        <p>Ingredients</p>
+        <p>{recipe.amount}{recipe.unit}{recipe.ingredients}</p>
+        <p>Instructions</p>
+        <p>{recipe.steps}</p>
         <Footer />
       </>
     );

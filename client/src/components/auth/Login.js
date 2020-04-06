@@ -9,7 +9,7 @@ import NavBar from '../NavBar';
 
 class Login extends Component {
   state = {
-    username: "",
+    email: "",
     password: "",
 
     error: ""
@@ -18,7 +18,7 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    authService.login(this.state.username, this.state.password)
+    authService.login(this.state.email, this.state.password)
       .then(response => {
         this.setState({ error: "" });
 
@@ -50,19 +50,24 @@ class Login extends Component {
 
           <div className="field">
             <p className="control">
-              <input className="input" type="email" placeholder="Email" value={this.state.username} onChange={this.handleChange}></input>
+              <label>
+                <input className="input" type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}></input>
+              </label>
+
             </p>
           </div>
 
           <div className="field">
             <p className="control">
-              <input className="input" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+              <label>
+                <input className="input" type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+              </label>
             </p>
           </div>
 
           <div className="field">
             <p className="control">
-              <button className="button is-success">
+              <button className="button is-success" onClick={this.handleSubmit}>
                 Login
               </button>
             </p>
@@ -70,7 +75,7 @@ class Login extends Component {
         </form>
 
         <p>
-          <small>If you don't have an account yet, you can create your account <Link to="/signup">here</Link></small>
+          <small>If you don't have an account yet, you can create it <Link to="/signup">here</Link></small>
         </p>
 
         <Footer />
