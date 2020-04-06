@@ -17,12 +17,6 @@ class NavBar extends Component {
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
               </a>
-
-              <span className="navbar-burger burger" data-target="navbarMenuHeroA">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
             </div>
             <div id="navbarMenuHeroA" className="navbar-menu">
               <div className="navbar-end">
