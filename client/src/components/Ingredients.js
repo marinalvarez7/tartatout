@@ -12,302 +12,377 @@ const ingredients = [
   {
     name: "chicken",
     image: '/poulet.jpg',
+    checked: false,
   },
   {
     name: 'lamb',
     image: '/lamb.jpg',
+    checked: false,
   },
   {
     name: 'apple',
-    image: '/apple.png',
+    image: '/apple.jpg',
+    checked: false,
   },
   {
     name: 'broccoli',
     image: '/brocolis.jpg',
+    checked: false,
   },
   {
     name: 'potatoe',
     image: '/monsieurPatate.jpg',
+    checked: false,
   },
   {
     name: 'sardine',
     image: '/sardine.jpg',
+    checked: false,
   },
   {
     name: 'eggplant',
     image: '/eggplant.jpg',
+    checked: false,
   },
   {
     name: 'eggs',
     image: '/eggs.jpg',
+    checked: false,
   },
   {
     name: 'tomatoes',
     image: '/tomatoes.jpg',
+    checked: false,
   },
   {
     name: 'onion',
     image: '/onions.jpg',
+    checked: false,
   },
   {
     name: 'butter',
     image: '/butter.jpg',
+    checked: false,
   },
   {
     name: 'cheese',
     image: '/cheese.jpg',
+    checked: false,
   },
   {
     name: 'flour',
     image: '/flour.jpg',
+    checked: false,
   },
   {
     name: 'garlic',
     image: '/garlic.jpg',
+    checked: false,
   },
   {
     name: 'oil',
     image: '/oil.jpg',
+    checked: false,
   },
   {
     name: 'mozzarella',
     image: '/mozzarella.jpg',
+    checked: false,
   },
   {
     name: 'spinach',
     image: '/spinach.jpg',
+    checked: false,
   },
   {
     name: 'wine',
     image: '/wines.jpg',
+    checked: false,
   },
   {
     name: 'parmesan',
     image: '/parmesan.jpg',
+    checked: false,
   },
   {
     name: 'beans',
     image: '/beans.jpg',
+    checked: false,
   },
   {
     name: 'carrot',
     image: '/carrots.jpg',
+    checked: false,
   },
   {
     name: 'celery',
     image: '/celery.jpg',
+    checked: false,
   },
   {
     name: 'sherry',
     image: '/sherry.jpg',
+    checked: false,
   },
   {
     name: 'vinegar',
     image: '/vinegar.jpg',
+    checked: false,
   },
   {
     name: 'sugar',
     image: '/sugar.jpg',
+    checked: false,
   },
   {
     name: 'cranberries',
     image: '/cranberries.jpg',
+    checked: false,
   },
   {
     name: 'mushroom',
     image: '/mushrooms.jpg',
+    checked: false,
   },
   {
     name: 'prosciutto',
     image: '/prosciutto.jpg',
+    checked: false,
   },
   {
     name: 'curry',
     image: '/curry.jpg',
+    checked: false,
   },
   {
     name: 'soy sauce',
     image: '/soySauce.jpg',
+    checked: false,
   },
   {
     name: 'mustard',
     image: '/mustard.jpg',
+    checked: false,
   },
   {
     name: 'ham',
     image: '/ham.jpg',
+    checked: false,
   },
   {
     name: 'honey',
     image: '/honey.jpg',
+    checked: false,
   },
   {
     name: 'beef',
-    image: '',
+    image: '/beef.jpg',
+    checked: false,
   },
   {
     name: 'chives',
     image: '/chives.jpg',
+    checked: false,
   },
   {
     name: 'oranges',
     image: '/oranges.jpg',
+    checked: false,
   },
   {
     name: 'shallots',
-    image: '',
+    image: '/shallots.jpg',
+    checked: false,
   },
   {
     name: 'anchovy',
     image: '/anchovies.jpg',
+    checked: false,
   },
   {
     name: 'chili',
     image: '/chili.jpg',
+    checked: false,
   },
   {
     name: 'apricot',
     image: '/apricot.jpg',
+    checked: false,
   },
   {
     name: 'almond',
     image: '/almond.jpg',
+    checked: false,
   },
   {
     name: 'lemon',
     image: '/lemon.jpg',
+    checked: false,
   },
   {
     name: 'peach',
     image: '/peach.jpg',
+    checked: false,
   },
   {
     name: 'masala',
     image: '/masala.jpg',
+    checked: false,
   },
   {
     name: 'turmeric',
     image: '/turmeric.jpg',
+    checked: false,
   },
   {
     name: 'avocado',
     image: '/avocado.jpg',
+    checked: false,
   },
   {
     name: 'lentils',
     image: '/lentils.jpg',
+    checked: false,
   },
   {
     name: 'yogurt',
     image: '/yogurt.jpg',
+    checked: false,
   },
   {
     name: 'enchilada sauce',
     image: '/enchilada-sauce.jpg',
+    checked: false,
   },
   {
     name: 'lime',
     image: '/lime.jpg',
+    checked: false,
   },
   {
     name: 'arugula',
     image: '/arugula.jpg',
+    checked: false,
   },
   {
     name: 'crab',
     image: '/crab.jpg',
+    checked: false,
   },
   {
     name: 'lettuce',
     image: '/lettuce.jpg',
+    checked: false,
   },
   {
     name: 'radish',
     image: '/radish.jpg',
+    checked: false,
   },
   {
     name: 'romaine',
     image: '/romaine.jpg',
+    checked: false,
   },
   {
     name: 'rum',
     image: '/rum.jpg',
+    checked: false,
   },
   {
     name: 'sour cream',
     image: '/sourCream.jpg',
+    checked: false,
   },
   {
     name: 'bacon',
     image: '/bacon.jpg',
+    checked: false,
   },
   {
     name: 'mayonnaise',
     image: '/mayonnaise.jpg',
+    checked: false,
   },
   {
     name: 'jalapeño',
-    image: '/jalapeño',
+    image: '/jalapeno.jpg',
+    checked: false,
   },
   {
     name: 'cider',
     image: '/cider.jpg',
+    checked: false,
   },
   {
     name: 'date',
     image: '/date.jpg',
+    checked: false,
   },
   {
     name: 'raisins',
     image: '/raisins.jpg',
+    checked: false,
   },
   {
     name: 'granola',
     image: '/granola.jpg',
+    checked: false,
   },
   {
     name: 'vanilla',
     image: '/vanilla.jpg',
+    checked: false,
   },
   {
     name: 'coconut',
     image: '/coconut.jpg',
+    checked: false,
   },
   {
     name: 'puff pastry',
     image: '/puff-pastry.jpg',
+    checked: false,
   },
   {
     name: 'mint',
     image: '/mint.jpg',
+    checked: false,
   },
   {
     name: 'chickpeas',
     image: '/chickpeas.jpg',
+    checked: false,
   },
   {
     name: 'oregano',
     image: '/oregano.jpg',
+    checked: false,
   },
   {
     name: 'tahini',
     image: '/tahini.jpg',
+    checked: false,
   },
   {
     name: 'macaroni',
     image: '/macaroni.jpg',
+    checked: false,
   },
   {
     name: 'zucchini',
     image: '/zucchini.jpg',
+    checked: false,
   },
   {
     name: 'linguine',
     image: '/linguine.jpg',
+    checked: false,
   },
   {
     name: 'tortellini',
     image: '/tortellini.jpg',
+    checked: false,
   }
 ]
 
@@ -420,6 +495,11 @@ class Ingredients extends Component {
               );
             })}
         </div>
+
+
+
+
+
         <Footer />
       </>
     );
