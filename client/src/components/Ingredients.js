@@ -473,7 +473,6 @@ class Ingredients extends Component {
             </div>
           ))}
         </div>
-
         <div className="concernedRecipes">
           {this.state.results
             .filter((ing) =>

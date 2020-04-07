@@ -104,6 +104,42 @@ a {text-decoration:inherit; color:inherit;}
   }
 } */
 
+/***
+ *     ######  ######## ##       ########  ######  ######## ######## ########  
+ *    ##    ## ##       ##       ##       ##    ##    ##    ##       ##     ## 
+ *    ##       ##       ##       ##       ##          ##    ##       ##     ## 
+ *     ######  ######   ##       ######   ##          ##    ######   ##     ## 
+ *          ## ##       ##       ##       ##          ##    ##       ##     ## 
+ *    ##    ## ##       ##       ##       ##    ##    ##    ##       ##     ## 
+ *     ######  ######## ######## ########  ######     ##    ######## ########  
+ */
+ /* .card_ingredients {
+  width: 15%;
+  margin-bottom: 15px;
+}
+
+
+.card_ingredients {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.concernedRecipes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 15px;
+}
+ .concernedRecipes img {
+  max-width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  margin: 50px;
+  border-radius: 25%;
+} 
 
 /*
  *    ########  ########  ######  #### ########  ########  ######  
