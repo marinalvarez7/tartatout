@@ -11,7 +11,7 @@ class Recipes extends Component {
   state = { listOfRecipes: [] }
 
   getAllRecipes = () => {
-    axios.get(`${process.env.REACT_APP_API_URL || ""}/allrecipes`)
+    axios.get(`${process.env.REACT_APP_APIURL || ""}/allrecipes`)
       .then(response => response.data)
       .then(data => {
         console.log('data', data);
@@ -28,6 +28,8 @@ class Recipes extends Component {
     return (
       <div>
         <NavBar />
+
+
 
         <p className="title is-1 has-text-centered">Choisis ta recette</p>
         <p className="title is-2 has-text-centered">Bon appetit!</p>

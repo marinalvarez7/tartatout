@@ -439,10 +439,10 @@ class Ingredients extends Component {
   }
   getInfo = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || ""}/allrecipes`)
+      .get(`${process.env.REACT_APP_APIURL || ""}/allrecipes`)
       .then((response) => response.data)
       .then((data) => {
-        // console.log("data", data);
+        console.log("data", data);
         this.setState({ results: data });
       })
       .catch((err) => (err) => console.log(err));

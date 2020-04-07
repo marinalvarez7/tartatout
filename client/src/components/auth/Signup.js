@@ -50,38 +50,41 @@ class Signup extends Component {
 
         <h1 className="title is-1 has-text-centered">Sign up</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <div className="form">
+          <form onSubmit={this.handleSubmit}>
 
-          {this.state.error && (
-            <p className="error">{this.state.error}</p>
-          )}
-
-          <label class="label">Email</label>
-          <div className="field column is-one-quarter">
-            <p className="control">
-              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.email} onChange={this.handleChange}></input>
-            </p>
-          </div>
+            {this.state.error && (
+              <p className="error">{this.state.error}</p>
+            )}
 
 
-          <label class="label">Password</label>
-          <div className="field column is-one-quarter">
-            <p className="control">
-              <input className="input" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
-            </p>
-          </div>
+            <label class="label">Email</label>
+            <div className="field column is-one-quarter">
+              <p className="control">
+                <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.email} onChange={this.handleChange}></input>
+              </p>
+            </div>
 
-          <div className="field ">
-            <p className="control">
-              <button className="button is-success" type="submit" value="Submit">
-                Login
+
+            <label class="label">Password</label>
+            <div className="field column is-one-quarter">
+              <p className="control">
+                <input className="input" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
+              </p>
+            </div>
+
+            <div className="field ">
+              <p className="control">
+                <button className="button is-success" type="submit" value="Submit">
+                  Login
               </button>
-            </p>
-          </div>
-        </form>
-        <p>
-          <small>If you already have an account, you can login from <Link to="/login">here</Link></small>
-        </p>
+              </p>
+            </div>
+          </form>
+          <p>
+            <small>If you already have an account, you can login from <Link to="/login">here</Link></small>
+          </p>
+        </div>
 
         <Footer />
       </div>

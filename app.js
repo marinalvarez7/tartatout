@@ -1,19 +1,19 @@
 require('dotenv').config();
 
-const bodyParser   = require('body-parser');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const express      = require('express');
-const mongoose     = require('mongoose');
-const logger       = require('morgan');
-const path         = require('path');
+const express = require('express');
+const mongoose = require('mongoose');
+const logger = require('morgan');
+const path = require('path');
 
-const session    = require("express-session");
+const session = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 
 const app_name = require('./package.json').name; // "tartatout"
 
 mongoose
-  .connect((process.env.MONGODB_URI ||`mongodb://localhost/${app_name}`), {useNewUrlParser: true})
+  .connect((process.env.MONGODB_URI || `mongodb://localhost/${app_name}`), { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -36,7 +36,7 @@ app.use(session({
   secret: `${app_name}-shhhhhhht`,
   resave: true,
   saveUninitialized: true,
-  store: new MongoStore( { mongooseConnection: mongoose.connection })
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
 }))
 require('./passport')(app);
 
@@ -53,7 +53,7 @@ const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
 const recipesRoutes = require('./routes/recipes');
-app.use ('/', recipesRoutes);
+app.use('/', recipesRoutes);
 
 //
 // After routes: static server || React SPA
@@ -83,11 +83,11 @@ app.use((err, req, res, next) => {
   function er2JSON(er) {
     // http://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify#18391212
     var o = {};
-  
+
     Object.getOwnPropertyNames(er).forEach(function (key) {
       o[key] = er[key];
     });
-  
+
     return o;
   }
 

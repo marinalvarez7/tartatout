@@ -7,12 +7,6 @@
   }
 }
 
-body {
-  padding-bottom: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 a {text-decoration:inherit; color:inherit;}
@@ -34,13 +28,6 @@ a {text-decoration:inherit; color:inherit;}
   padding-bottom: 20px;
 }
 
-
-
-.card-header{
-  text-transform: uppercase;
-  font-weight : bold;
-}
-
 /*
  *    #### ##    ##  ######   ########  ######## ########  #### ######## ##    ## ########  ######  
  *     ##  ###   ## ##    ##  ##     ## ##       ##     ##  ##  ##       ###   ##    ##    ##    ## 
@@ -50,6 +37,11 @@ a {text-decoration:inherit; color:inherit;}
  *     ##  ##   ### ##    ##  ##    ##  ##       ##     ##  ##  ##       ##   ###    ##    ##    ## 
  *    #### ##    ##  ######   ##     ## ######## ########  #### ######## ##    ##    ##     ######                                                                                                   
  */
+
+.card-header{
+  text-transform: uppercase;
+  font-weight : bold;
+}
 
 .card_ingredients {
   width: 15%;
@@ -69,20 +61,6 @@ a {text-decoration:inherit; color:inherit;}
   justify-content: center;
   align-items: center;
 }
-/* .card_ingredients button {
-  min-width: 100px;
-  display: inline;
-  padding: 0.3em 1.2em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  color: #FFFFFF;
-  background-color: #4EB5F1;
-  text-align: center;
-  transition: all 0.2s;
-  outline: none;
-} */
 
 .card_ingredients a:hover {
   display: none;
@@ -97,13 +75,6 @@ a {text-decoration:inherit; color:inherit;}
   border-radius: 25%;
 } 
 
-/* @media all and (max-width: 30em) {
-   .card_ingredients button3 {
-    display: block;
-    margin: 0.2em auto;
-  }
-} */
-
 /***
  *     ######  ######## ##       ########  ######  ######## ######## ########  
  *    ##    ## ##       ##       ##       ##    ##    ##    ##       ##     ## 
@@ -113,19 +84,7 @@ a {text-decoration:inherit; color:inherit;}
  *    ##    ## ##       ##       ##       ##    ##    ##    ##       ##     ## 
  *     ######  ######## ######## ########  ######     ##    ######## ########  
  */
- /* .card_ingredients {
-  width: 15%;
-  margin-bottom: 15px;
-}
-
-
-.card_ingredients {
-  width: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
+ 
 .concernedRecipes {
   display: flex;
   flex-flow: row wrap;
@@ -164,3 +123,33 @@ a {text-decoration:inherit; color:inherit;}
  .card-header-recipes{
   height: 80px;
 }
+
+/*
+.______       _______   ______  __  .______    _______     _______   _______ .___________.    ___       __   __          _______.
+|   _  \     |   ____| /      ||  | |   _  \  |   ____|   |       \ |   ____||           |   /   \     |  | |  |        /       |
+|  |_)  |    |  |__   |  ,----'|  | |  |_)  | |  |__      |  .--.  ||  |__   `---|  |----`  /  ^  \    |  | |  |       |   (----`
+|      /     |   __|  |  |     |  | |   ___/  |   __|     |  |  |  ||   __|      |  |      /  /_\  \   |  | |  |        \   \    
+|  |\  \----.|  |____ |  `----.|  | |  |      |  |____    |  '--'  ||  |____     |  |     /  _____  \  |  | |  `----.----)   |   
+| _| `._____||_______| \______||__| | _|      |_______|   |_______/ |_______|    |__|    /__/     \__\ |__| |_______|_______/    
+                                                                                                                                 
+*/
+
+.recipe{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*
+_        ______     _______  __  .__   __.         _______. __    _______ .__   __.     __    __  .______   
+|  |      /  __  \   /  _____||  | |  \ |  |        /       ||  |  /  _____||  \ |  |    |  |  |  | |   _  \  
+|  |     |  |  |  | |  |  __  |  | |   \|  |       |   (----`|  | |  |  __  |   \|  |    |  |  |  | |  |_)  | 
+|  |     |  |  |  | |  | |_ | |  | |  . `  |        \   \    |  | |  | |_ | |  . `  |    |  |  |  | |   ___/  
+|  `----.|  `--'  | |  |__| | |  | |  |\   |    .----)   |   |  | |  |__| | |  |\   |    |  `--'  | |  |      
+|_______| \______/   \______| |__| |__| \__|    |_______/    |__|  \______| |__| \__|     \______/  | _|    
+*/
+
+.form{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
