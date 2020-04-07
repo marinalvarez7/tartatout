@@ -463,23 +463,23 @@ class Ingredients extends Component {
     return (
       <>
         <NavBar />
-        <h1 class="title is-1 has-text-centered">Choisis tes ingredients</h1>
+        <h1 className="title is-1 has-text-centered">Choisis tes ingredients</h1>
         <div className="ingredients card columns is-multiline is-mobile">
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card_ingredients column is-one-quarter">
-              <header class="card-header">{ingredient.name}</header>
-              <div class="card-content">
-                <div class="content">
-                  <div class="card-image">
-                    <figure class="image 128x128">
+              <header ClassName="card-header">{ingredient.name}</header>
+              <div ClassName="card-content">
+                <div ClassName="content">
+                  <div ClassName="card-image">
+                    <figure ClassName="image 128x128">
                       <img src={ingredient.image} alt="" />
                     </figure>
                   </div>
                 </div>
                 <a href="#">@yummy</a> <a href="#">#{ingredient.name}</a> <a href="#">#tropbon</a>
               </div>
-              <footer class="card-footer">
-                <a class="card-footer-item">
+              <footer className="card-footer">
+                <a className="card-footer-item">
                   <label className="checkbox">
                     <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
                 Mettre dans mon panier
