@@ -467,8 +467,9 @@ class Ingredients extends Component {
         <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card_ingredients"><a href="#">{ingredient.name}</a>
-              <label className="checkbox"><img src={ingredient.image} alt="" />
-                    <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
+              <label className="checkbox">
+                <img src={ingredient.image} alt=""/>
+                <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
               </label>
             </div>
           ))}
@@ -486,9 +487,9 @@ class Ingredients extends Component {
             )
             .map((recipe) => {
               return (
-                <div>
+                <div  className="recipesDisplayed">
                   <p>{recipe.title}</p>
-                  <Link to={`/recipes/${recipe._id}`}><img src={recipe.image} /></Link>
+                  <Link to={`/recipes/${recipe._id}`}><img className='cardRecipes' src={recipe.image} alt={recipe.title}/></Link>
 
                 </div>
               );

@@ -14,7 +14,7 @@ router.post("/signup", (req, res, next) => {
   const password = req.body.password;
   const email = req.body.email;
 
-  if (!username || !password || !email) {
+  if ( !password || !email) {
     res.status(400).json({message: "Indicate username, email and password"});
     return;
   }

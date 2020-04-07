@@ -67,6 +67,7 @@ a {text-decoration:inherit; color:inherit;}
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 /* .card_ingredients button {
   min-width: 100px;
@@ -130,16 +131,26 @@ a {text-decoration:inherit; color:inherit;}
   flex-flow: row wrap;
   justify-content: flex-start;
   padding: 15px;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
 }
- .concernedRecipes img {
+
+.recipesDisplayed img {
   max-width: 100%;
   height: 100px;
   margin-bottom: 15px;
+  margin-left: 25px;
   vertical-align: middle;
-  margin: 50px;
   border-radius: 25%;
+  align-content: space-around;
+  justify-content: center;
 } 
 
+.recipesDisplayed p {
+  align-content: space-around;
+  justify-content: center;
+}
 /*
  *    ########  ########  ######  #### ########  ########  ######  
  *    ##     ## ##       ##    ##  ##  ##     ## ##       ##    ## 
