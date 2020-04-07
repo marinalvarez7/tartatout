@@ -7,10 +7,23 @@
   }
 }
 
+body {
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 a {text-decoration:inherit; color:inherit;}
+
+/*  ##    ##    ###    ##     ## ########     ###    ########  
+//  ###   ##   ## ##   ##     ## ##     ##   ## ##   ##     ## 
+//  ####  ##  ##   ##  ##     ## ##     ##  ##   ##  ##     ## 
+//  ## ## ## ##     ## ##     ## ########  ##     ## ########  
+//  ##  #### #########  ##   ##  ##     ## ######### ##   ##   
+//  ##   ### ##     ##   ## ##   ##     ## ##     ## ##    ##  
+//  ##    ## ##     ##    ###    ########  ##     ## ##     ## */
 
 .navbar-brand img {
   width: 120px;
@@ -21,11 +34,7 @@ a {text-decoration:inherit; color:inherit;}
   padding-bottom: 20px;
 }
 
-body {
-  padding-bottom: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
-}
+
 
 .card-header{
   text-transform: uppercase;
@@ -34,9 +43,5 @@ body {
 
 .card-header-recipes{
   height: 80px;
-}
-
-.img-recipes{
-
 }
 
