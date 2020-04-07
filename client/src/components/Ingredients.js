@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
+
 import { Link, Redirect } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
-
 
 
 const ingredients = [
@@ -466,21 +466,10 @@ class Ingredients extends Component {
         <h1 className="title is-1 has-text-centered">Choisis tes ingredients</h1>
         <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
-            <div className="card_ingredients">
-              <header ClassName="card-header"><a href="#">{ingredient.name}</a></header>
-              <div ClassName="card-content">
-                  <div ClassName="card-image">
-                      <img src={ingredient.image} alt="" />
-                  </div>
-              </div>
-              <footer className="card-footer">
-                <a className="card-footer-item">
-                  <label className="checkbox">
+            <div className="card_ingredients"><a href="#">{ingredient.name}</a>
+              <label className="checkbox"><img src={ingredient.image} alt="" />
                     <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
-                Mettre dans mon panier
               </label>
-                </a>
-              </footer>
             </div>
           ))}
         </div>

@@ -51,17 +51,11 @@ a {text-decoration:inherit; color:inherit;}
  *     ##  ##   ### ##    ##  ##    ##  ##       ##     ##  ##  ##       ##   ###    ##    ##    ## 
  *    #### ##    ##  ######   ##     ## ######## ########  #### ######## ##    ##    ##     ######                                                                                                   
  */
-.card-header-recipes{
-  height: 80px;
-}
 
-
-
-
-/* .card_ingredients {
+.card_ingredients {
   width: 15%;
   margin-bottom: 15px;
-} */
+}
 
 .ingredients {
   display: flex;
@@ -75,7 +69,7 @@ a {text-decoration:inherit; color:inherit;}
   flex-direction: column;
   justify-content: center;
 }
-.card_ingredients button {
+/* .card_ingredients button {
   min-width: 100px;
   display: inline;
   padding: 0.3em 1.2em;
@@ -88,24 +82,28 @@ a {text-decoration:inherit; color:inherit;}
   text-align: center;
   transition: all 0.2s;
   outline: none;
-}
+} */
+
 .card_ingredients a:hover {
-  background-color: #4095C6;
+  display: none;
 }
 
-@media all and (max-width: 30em) {
-   .card_ingredients button3 {
-    display: block;
-    margin: 0.2em auto;
-  }
-}
 .card_ingredients img {
   max-width: 100%;
   height: 50px;
   margin-bottom: 15px;
   vertical-align: middle;
   margin: 0 auto;
+  border-radius: 25%;
 } 
+
+/* @media all and (max-width: 30em) {
+   .card_ingredients button3 {
+    display: block;
+    margin: 0.2em auto;
+  }
+} */
+
 
 /*
  *    ########  ########  ######  #### ########  ########  ######  
@@ -117,6 +115,9 @@ a {text-decoration:inherit; color:inherit;}
  *    ##     ## ########  ######  #### ##        ########  ######                                                                 
  */
 
+ .card-header-recipes{
+  height: 80px;
+}
 
 /***
  *    ########  ########  ######  #### ########  ######## 
