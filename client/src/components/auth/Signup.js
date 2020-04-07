@@ -9,11 +9,9 @@ import Footer from '../Footer';
 
 class Signup extends Component {
   state = {
-    username: "",
+    username:"",
+    email: "",
     password: "",
-    campus: "",
-    course: "",
-
     error: ""
   }
 
@@ -21,12 +19,12 @@ class Signup extends Component {
     event.preventDefault();
 
     // 1. Signup
-    authService.signup(this.state.username, this.state.password)
+    authService.signup(this.state.email, this.state.password)
       .then(() => {
         this.setState({ error: "" });
 
         // 2. then, update with user infos
-        authService.edit(this.state.username, this.state.campus, this.state.course)
+        authService.edit(this.state.username)
           .then(response => {
             this.setState({ error: "" });
 

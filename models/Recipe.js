@@ -11,7 +11,6 @@ const recipeSchema = new Schema(
       servings: Number,
       ingredients: [],
       ingredientsList:[],
-      summary: String,
       amount: [],
       unit: [],
 			steps: []

@@ -11,7 +11,7 @@ class NavBar extends Component {
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
-              <img src={logoTartatout} alt="Logo" />
+              <Link to="/"><img  src={logoTartatout} alt="Logo"/></Link>
               <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>

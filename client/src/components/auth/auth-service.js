@@ -8,14 +8,14 @@ export default {
     withCredentials: true
   }),
 
-  login(username, password) {
-    return this.service.post('/login', {username, password})
+  login(email, password) {
+    return this.service.post('/login', {email, password})
       .then(response => response.data)
   },
 
-  signup(username, password) {
+  signup(email, password) {
     return this.service.post('/signup', {
-      username,
+      email,
       password
     })
       .then(response => response.data)
@@ -31,11 +31,10 @@ export default {
       .then(response => response.data)
   },
 
-  edit(username, campus, course) {
+  edit(email, password) {
     return this.service.post('/edit', {
-      username,
-      campus,
-      course
+      email,
+      password
     })
       .then(response => response.data)
   },
