@@ -11,7 +11,7 @@ class Recipes extends Component {
   state = { listOfRecipes: [] }
 
   getAllRecipes = () => {
-    axios.get(`http://localhost:5000/allrecipes`)
+    axios.get(`${process.env.MONGODB_URI || "http://localhost:5000"}/allrecipes`)
       .then(response => response.data)
       .then(data => {
         console.log('data', data);

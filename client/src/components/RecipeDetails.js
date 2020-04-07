@@ -9,7 +9,7 @@ class RecipeDetails extends Component {
   };
   componentDidMount() {
     axios
-      .get(`http://localhost:5000/allrecipes/${this.props.match.params.id}`)
+      .get(`${process.env.MONGODB_URI || "http://localhost:5000"}/allrecipes/${this.props.match.params.id}`)
       .then((response) => response.data)
       .then((data) => {
         console.log("data", data);

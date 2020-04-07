@@ -439,7 +439,7 @@ class Ingredients extends Component {
   }
   getInfo = () => {
     axios
-      .get("http://localhost:5000/allrecipes")
+      .get(`${process.env.MONGODB_URI || "http://localhost:5000"}/allrecipes`)
       .then((response) => response.data)
       .then((data) => {
         // console.log("data", data);
