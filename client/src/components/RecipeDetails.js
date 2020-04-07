@@ -33,6 +33,9 @@ import NavBar from "./NavBar";
         <p>Instructions</p>
         <p>{recipe.steps}</p>
         <Footer />
+
+      
+
       </>
     );
   }

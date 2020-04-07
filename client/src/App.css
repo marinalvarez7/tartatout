@@ -51,6 +51,11 @@ a {text-decoration:inherit; color:inherit;}
  *     ##  ##   ### ##    ##  ##    ##  ##       ##     ##  ##  ##       ##   ###    ##    ##    ## 
  *    #### ##    ##  ######   ##     ## ######## ########  #### ######## ##    ##    ##     ######                                                                                                   
  */
+.card-header-recipes{
+  height: 80px;
+}
+
+
 
 
 /* .card_ingredients {
