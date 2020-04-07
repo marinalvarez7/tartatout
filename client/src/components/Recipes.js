@@ -49,10 +49,10 @@ class Recipes extends Component {
                   <a href="#">@sogood</a> <a href="#">#justeatme</a>
                 </div>
 
-                <footer class="card-footer">
-                  <a href="#" class="card-footer-item">👍</a>
-                  <a href="#" class="card-footer-item">😋</a>
-                  <a href="#" class="card-footer-item">👎</a>
+                <footer className="card-footer">
+                  <a href="#" className="card-footer-item">👍</a>
+                  <a href="#" className="card-footer-item">😋</a>
+                  <a href="#" className="card-footer-item">👎</a>
                 </footer>
               </div>
 

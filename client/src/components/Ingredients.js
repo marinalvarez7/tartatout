@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-// import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -505,7 +505,7 @@ class Ingredients extends Component {
               return (
                 <div>
                   <p>{recipe.title}</p>
-                  <img src={recipe.image} />
+                  <Link to={`/recipes/${recipe._id}`}><img src={recipe.image} /></Link>
                 </div>
               );
             })}
