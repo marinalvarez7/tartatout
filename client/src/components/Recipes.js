@@ -31,13 +31,13 @@ class Recipes extends Component {
 
         <p className="title is-1 has-text-centered">Choisis ta recette</p>
         <p className="title is-2 has-text-centered">Bon appetit!</p>
-      <div className="card columns is-multiline is-mobile">
-        {this.state.listOfRecipes.map(recipe => {
-          return (
-      
+        <div className="card columns is-multiline is-mobile">
+          {this.state.listOfRecipes.map(recipe => {
+            return (
+
               <div className="card column is-one-quarter">
                 <div key={recipe._id}>
-                  
+
                   <header class="card-header card-header-recipes"><Link to={`/recipes/${recipe._id}`}>{recipe.title}</Link></header>
                   <div class="content">
                     <div class="card-image">
@@ -56,9 +56,9 @@ class Recipes extends Component {
                 </footer>
               </div>
 
-          );
-        })}
-            </div>
+            );
+          })}
+        </div>
 
         <Footer />
       </div>
