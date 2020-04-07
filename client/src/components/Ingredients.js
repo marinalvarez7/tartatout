@@ -464,19 +464,14 @@ class Ingredients extends Component {
       <>
         <NavBar />
         <h1 className="title is-1 has-text-centered">Choisis tes ingredients</h1>
-        <div className="ingredients card columns is-multiline is-mobile">
+        <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
-            <div className="card_ingredients column is-one-quarter">
-              <header ClassName="card-header">{ingredient.name}</header>
+            <div className="card_ingredients">
+              <header ClassName="card-header"><a href="#">{ingredient.name}</a></header>
               <div ClassName="card-content">
-                <div ClassName="content">
                   <div ClassName="card-image">
-                    <figure ClassName="image 128x128">
                       <img src={ingredient.image} alt="" />
-                    </figure>
                   </div>
-                </div>
-                <a href="#">@yummy</a> <a href="#">#{ingredient.name}</a> <a href="#">#tropbon</a>
               </div>
               <footer className="card-footer">
                 <a className="card-footer-item">
@@ -506,6 +501,7 @@ class Ingredients extends Component {
                 <div>
                   <p>{recipe.title}</p>
                   <Link to={`/recipes/${recipe._id}`}><img src={recipe.image} /></Link>
+
                 </div>
               );
             })}
