@@ -10,12 +10,11 @@ const bcryptSalt = 10;
 
 
 router.post("/signup", (req, res, next) => {
-  const username = req.body.username;
   const password = req.body.password;
   const email = req.body.email;
 
-  if ( !password || !email) {
-    res.status(400).json({message: "Indicate username, email and password"});
+  if ( !email || !password ) {
+    res.status(400).json({message: "Indicate email and password"});
     return;
   }
 
@@ -29,7 +28,6 @@ router.post("/signup", (req, res, next) => {
     const hashPass = bcrypt.hashSync(password, salt);
 
     const newUser = new User({
-      username,
       email,
       password: hashPass
     });

@@ -9,7 +9,6 @@ import Footer from '../Footer';
 
 class Signup extends Component {
   state = {
-    username:"",
     email: "",
     password: "",
     error: ""
@@ -24,7 +23,7 @@ class Signup extends Component {
         this.setState({ error: "" });
 
         // 2. then, update with user infos
-        authService.edit(this.state.username)
+        authService.edit(this.state.email)
           .then(response => {
             this.setState({ error: "" });
 
@@ -60,7 +59,7 @@ class Signup extends Component {
           <label class="label">Email</label>
           <div className="field column is-one-quarter">
             <p className="control">
-              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.username} onChange={this.handleChange}></input>
+              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.email} onChange={this.handleChange}></input>
             </p>
           </div>
 

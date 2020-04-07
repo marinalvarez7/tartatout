@@ -51,7 +51,7 @@ class Login extends Component {
           <label class="label">Email</label>
           <div className="field column is-one-quarter">
             <p className="control">
-              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.username} onChange={this.handleChange}></input>
+              <input className="input" type="email" name="email" placeholder="toto@gmail.com" value={this.state.email} onChange={this.handleChange}></input>
             </p>
           </div>
 
