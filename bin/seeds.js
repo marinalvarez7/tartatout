@@ -11,7 +11,9 @@ const mongoose = require("mongoose");
 const json = require("./data.json");
 const Recipe = require("../models/Recipe");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tartatout", { useNewUrlParser: true });
+const app_name = require('./package.json').name; // "tartatout"
+
+mongoose.connect((process.env.MONGODB_URI || `mongodb://localhost/${app_name}`), { useNewUrlParser: true });
 
 //mongoose.connection.db.dropDatabase();
 
