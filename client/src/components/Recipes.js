@@ -11,7 +11,7 @@ class Recipes extends Component {
   state = { listOfRecipes: [] }
 
   getAllRecipes = () => {
-    axios.get(`${process.env.REACT_APP_API_URL || "http://localhost:5000"}/allrecipes`)
+    axios.get(`${process.env.REACT_APP_API_URL || ""}/allrecipes`)
       .then(response => response.data)
       .then(data => {
         console.log('data', data);
