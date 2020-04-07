@@ -439,10 +439,10 @@ class Ingredients extends Component {
   }
   getInfo = () => {
     axios
-      .get("http://localhost:5000/allrecipes")
+      .get(`${process.env.REACT_APP_APIURL || ""}/allrecipes`)
       .then((response) => response.data)
       .then((data) => {
-        // console.log("data", data);
+        console.log("data", data);
         this.setState({ results: data });
       })
       .catch((err) => (err) => console.log(err));
@@ -468,7 +468,7 @@ class Ingredients extends Component {
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card_ingredients"><a href="#">{ingredient.name}</a>
               <label className="checkbox">
-                <img src={ingredient.image} alt=""/>
+                <img src={ingredient.image} alt="" />
                 <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
               </label>
             </div>
@@ -487,9 +487,9 @@ class Ingredients extends Component {
             )
             .map((recipe) => {
               return (
-                <div  className="recipesDisplayed">
+                <div className="recipesDisplayed">
                   <p>{recipe.title}</p>
-                  <Link to={`/recipes/${recipe._id}`}><img className='cardRecipes' src={recipe.image} alt={recipe.title}/></Link>
+                  <Link to={`/recipes/${recipe._id}`}><img className='cardRecipes' src={recipe.image} alt={recipe.title} /></Link>
 
                 </div>
               );

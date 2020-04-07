@@ -8,10 +8,12 @@ require('dotenv').config({
 });
 
 const mongoose = require("mongoose");
-const json = require ("./data.json");
-const Recipe = require ("../models/Recipe");
+const json = require("./data.json");
+const Recipe = require("../models/Recipe");
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+const app_name = require('./package.json').name; // "tartatout"
+
+mongoose.connect((process.env.MONGODB_URI || `mongodb://localhost/tartatout`), { useNewUrlParser: true });
 
 //mongoose.connection.db.dropDatabase();
 
@@ -79,7 +81,7 @@ const recipes = json.map(complexrecipe => {
 console.log('recipes=', recipes)
 
 Recipe.create(recipes, (err) => {
-  if (err) { throw(err) }
+  if (err) { throw (err) }
   console.log(`Created ${json.length} recipes`);
 
   mongoose.disconnect();
