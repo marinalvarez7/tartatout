@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -250,8 +250,8 @@ const ingredients = [
     checked: false,
   },
   {
-    name: 'enchilada sauce',
-    image: '/enchilada-sauce.jpg',
+    name: 'enchilada',
+    image: '/enchiladaSauce.jpg',
     checked: false,
   },
   {
@@ -391,44 +391,6 @@ const ingredients = [
   }
 ]
 
-const selectedIngredients = [
-  {
-    name: 'chicken',
-    image: '',
-  },
-  {
-    name: 'lamb',
-    image: '',
-  },
-  {
-    name: 'avocado',
-    image: '',
-  },
-  {
-    name: 'apple',
-    image: '',
-  },
-  {
-    name: 'eggplant',
-    image: ''
-  },
-  {
-    name: 'pasta',
-    image: '',
-  },
-  {
-    name: 'peach',
-    image: '',
-  },
-  {
-    name: 'yogurt',
-    image: '',
-  },
-  {
-    name: 'sardine',
-    image: '',
-  }]
-
 class Ingredients extends Component {
   constructor(props) {
     super(props);
@@ -466,11 +428,11 @@ class Ingredients extends Component {
         <h1 className="title is-1 has-text-centered">Choisis tes ingredients</h1>
         <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
-            <div className="card_ingredients"><a href="#">{ingredient.name}</a>
+            <div className="card_ingredients">
               <div className="totalCheckbox" >
                 <div className='eachCheckbox'>
                   <input type="checkbox" id={ingredient.name} onChange={this.onToggle.bind(this, index)}></input>
-                  <label for={ingredient.name}><img src={ingredient.image} alt="" /></label>
+          <label for={ingredient.name}><img src={ingredient.image} alt="" /><figcaption>{ingredient.name}</figcaption></label>
                 </div>
               </div>
             </div>
@@ -494,7 +456,6 @@ class Ingredients extends Component {
                 <div className="recipesDisplayed">
                   <p>{recipe.title}</p>
                   <Link to={`/recipes/${recipe._id}`}><img className='cardRecipes' src={recipe.image} alt={recipe.title} /></Link>
-
                 </div>
               );
             })}

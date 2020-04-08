@@ -162,7 +162,9 @@ label::before {
   transform: scale(0);
 }
 
-
+figcaption{
+  text-align: center;
+}
 
 :checked+label {
   border-color: #ddd;
@@ -206,21 +208,28 @@ label::before {
   justify-content: center;
 }
 
+.recipesDisplayed{
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.recipesDisplayed p{
+  text-align: center;
+}
+
 .recipesDisplayed img {
   max-width: 100%;
   height: 100px;
   margin-bottom: 15px;
-  margin-left: 25px;
   vertical-align: middle;
   border-radius: 25%;
   align-content: space-around;
   justify-content: center;
 } 
 
-.recipesDisplayed p {
-  align-content: space-around;
-  justify-content: center;
-}
+
+
+
 /*
  *    ########  ########  ######  #### ########  ########  ######  
  *    ##     ## ##       ##    ##  ##  ##     ## ##       ##    ## 
