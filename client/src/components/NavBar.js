@@ -21,11 +21,10 @@ class NavBar extends Component {
             <div id="navbarMenuHeroA" className="navbar-menu">
               <div className="navbar-end">
                 <div class="buttons">
-                  <a className="button is-primary is-uppercase strong"><Link to="/">Home</Link></a>
-                  <a className="button is-primary is-uppercase strong"><Link to="/ingredients">Mes ingrédients</Link></a>
-                  <a className="button is-primary is-uppercase strong"><Link to="/recipes">Mes recettes</Link></a>
-                  <a className="button is-primary is-uppercase strong"><Link to="/signup">Sign up</Link></a>
-                  <a className="button is-primary is-uppercase strong"><Link to="/login">Log in</Link></a>
+                  <a className="button is-uppercase strong"><Link to="/ingredients">Mes ingrédients</Link></a>
+                  <a className="button is-uppercase strong"><Link to="/recipes">Mes recettes</Link></a>
+                  <a className="button is-uppercase strong"><Link to="/signup">Sign up</Link></a>
+                  <a className="button is-uppercase strong"><Link to="/login">Log in</Link></a>
                 </div>
               </div>
             </div>
