@@ -6,21 +6,24 @@ class Footer extends Component {
       <div className="footer content has-text-centered">
 
         <div className="columns">
-          <div className="column is-half">
-            <img className="logo-footer" src="../logoTartatout.png" alt="logo tartatout"></img>
-            <br></br>
-            <strong>Tartatout</strong>
-            <br></br>
-            Made in 🇫🇷 by Marina and Emmanuelle
-            <br></br>
-            with 🐱 and 🍲 in 2020
-            <br></br>
-            <img className="logo-apple" src="../Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg" alt="logo apple store"></img>
-            <br></br>
-            <img className="logo-windows" src="../google-play-badge.png" alt="logo google play"></img>
-          </div>
           <div className="column">
-            <strong>Company</strong>
+            <img className="logo-footer" src="../logoTartatout.png" alt="logo tartatout"></img>      
+          </div>
+
+          <div className="column">
+            <strong className="title">Tartatout</strong>
+              <br></br>
+              Made in 🇫🇷 by Marina and Emmanuelle
+              <br></br>
+              with 🐱 and 🍲 in 2020
+              <br></br>
+              <img className="logo-apple" src="../Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg" alt="logo apple store"></img>
+              <br></br>
+              <img className="logo-windows" src="../google-play-badge.png" alt="logo google play"></img>
+          </div>
+
+          <div className="column">
+            <strong className="title">Company</strong>
             <br></br>
             About us
             <br></br>
@@ -37,7 +40,7 @@ class Footer extends Component {
 
           </div>
           <div className="column">
-            <strong>Connect with us</strong>
+            <strong className="title">Connect with us</strong>
             <br></br>
             <img className="logo-social" src="../f_logo_RGB-Blue_58.png" alt="logo facebook"></img>
             Facebook

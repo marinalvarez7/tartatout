@@ -12,7 +12,7 @@ const Homepage = (props) => {
       <NavBar />
 
       <div className="container has-text-centered">
-        <h1 className="title is-1">
+        <h1 className="title is-1 big-title">
           TARTATOUT
               </h1>
         <h2 className="subtitle">
