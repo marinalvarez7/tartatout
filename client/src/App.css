@@ -291,16 +291,12 @@ figcaption{
  *    ##     ## ########  ######  #### ##        ########  ######                                                                 
  */
 
-<<<<<<< HEAD
  .columns{
   padding-left: 50px;
   padding-right: 50px;
 }
 
  .card-header-recipes{
-=======
-.card-header-recipes{
->>>>>>> a0fc099f833d16ed145cd23a528304abb4b61ff7
   height: 80px;
 }
 
