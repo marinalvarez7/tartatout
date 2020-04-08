@@ -474,6 +474,7 @@ class Ingredients extends Component {
             </div>
           ))}
         </div>
+        <h1 className="title is-1 has-text-centered">Voici les recettes</h1>
         <div className="concernedRecipes">
           {this.state.results
             .filter((ing) =>
