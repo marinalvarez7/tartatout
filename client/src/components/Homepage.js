@@ -12,7 +12,7 @@ const Homepage = (props) => {
       <NavBar />
 
       <div className="container has-text-centered">
-        <h1 className="title">
+        <h1 className="title is-1">
           TARTATOUT
               </h1>
         <h2 className="subtitle">
@@ -23,7 +23,7 @@ const Homepage = (props) => {
       <div className="hero-body">
         <div className="container">
           <figure className="image center">
-            <img src="./RNFGG3.jpg" alt="meals"></img>
+            <img src="./RNFGG3.png" alt="meals"></img>
           </figure>
         </div>
       </div>
@@ -49,11 +49,11 @@ const Homepage = (props) => {
           <div><Link to="/allrecipes">
             <h1>A toi de jouer </h1>
             <img className="img2-homepage" src="../gettyimages-1140410650-612x612.jpg" alt="photo cooking"></img>
-            </Link>
+          </Link>
           </div>
         </div>
       </div>
-      
+
       <Footer />
 
     </>

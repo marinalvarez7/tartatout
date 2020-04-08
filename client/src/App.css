@@ -7,7 +7,6 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 a {text-decoration:inherit; color:inherit;}
 
@@ -55,6 +54,11 @@ __    __    ______   .___  ___.  _______ .______      ___       _______  _______
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title{
+  font-family: 'Open Sans', sans-serif;
+  text-decoration:none;
 }
 
 .img2-homepage{
