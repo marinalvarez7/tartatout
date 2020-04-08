@@ -467,10 +467,12 @@ class Ingredients extends Component {
         <div className="ingredients">
           {this.state.ingredients.map((ingredient, index) => (
             <div className="card_ingredients"><a href="#">{ingredient.name}</a>
-              <label className="checkbox">
-                <img src={ingredient.image} alt="" />
-                <input type="checkbox" onChange={this.onToggle.bind(this, index)}></input>
-              </label>
+              <div className="totalCheckbox" >
+                <div className='eachCheckbox'>
+                  <input type="checkbox" id={ingredient.name} onChange={this.onToggle.bind(this, index)}></input>
+                  <label for={ingredient.name}><img src={ingredient.image} alt="" /></label>
+                </div>
+              </div>
             </div>
           ))}
         </div>
