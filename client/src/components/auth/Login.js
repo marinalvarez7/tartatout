@@ -42,37 +42,6 @@ class Login extends Component {
 
         <h1 className="title is-1 has-text-centered">Login</h1>
 
-<<<<<<< HEAD
-        <form onSubmit={this.handleSubmit}>
-
-          {this.state.error && (
-            <p className="error">{this.state.error}</p>
-          )}
-
-          <label class="label">Email</label>
-          <div className="field column is-one-quarter">
-            <p className="control">
-              <input className="input" type="email" name="email" placeholder="email" value={this.state.email} onChange={this.handleChange}></input>
-            </p>
-          </div>
-
-
-          <label class="label">Password</label>
-          <div className="field column is-one-quarter">
-            <p className="control">
-              <input className="input" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}></input>
-            </p>
-          </div>
-
-          <div className="field ">
-            <p className="control">
-              <button className="button is-success" type="submit" value="Submit">
-                Login
-              </button>
-            </p>
-          </div>
-        </form>
-=======
         <div className="form">
           <form onSubmit={this.handleSubmit}>
 
@@ -80,7 +49,6 @@ class Login extends Component {
               <p className="error">{this.state.error}</p>
             )}
 
->>>>>>> 0b2239a28f790b7f37b2b8b4ea9f8723132727ff
 
             <label class="label">Email</label>
             <div className="field column is-one-quarter">
