@@ -29,8 +29,6 @@ class Recipes extends Component {
       <div>
         <NavBar />
 
-
-
         <p className="title is-1 has-text-centered">Choisis ta recette</p>
         <p className="title is-2 has-text-centered">Bon appetit!</p>
         <div className="card columns is-multiline is-mobile">

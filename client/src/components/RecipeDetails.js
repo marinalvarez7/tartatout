@@ -27,23 +27,32 @@ class RecipeDetails extends Component {
 
         <div className="recipe">
 
-          <p className="title is-3">Informations</p>
-          <p>Servings : {recipe.servings} persons</p>
-          <p> Ready in {recipe.readyInMinutes} minutes</p>
-          <p>Cooked in {recipe.cookingTime} minutes</p>
+          <div class="column is-two-thirds">
+            <p className="title is-3">Informations</p>
+            <p>Servings : {recipe.servings} persons</p>
+            <p> Ready in {recipe.readyInMinutes} minutes</p>
+            <p>Cooked in {recipe.cookingTime} minutes</p>
 
-          <p className="title is-3 ">Ingredients</p>
-          <p>{recipe.ingredients}</p>
+            <p className="title is-3 ">Ingredients</p>
+            <p>{recipe.ingredients}</p>
 
-          <p className="title is-3">Instructions</p>
-          <p>{recipe.steps}</p>
+            <p className="title is-3">Instructions</p>
+            <p>{recipe.steps}</p>
+          </div>
+
+          <div class="column">
+            <figure class="image is-128x128">
+              <img src="{recipe.image}" alt="photo plat"></img>
+            </figure>
+          </div>
 
         </div>
-
+        
         <Footer />
 
       </>
     );
+
   }
 }
 
