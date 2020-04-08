@@ -310,7 +310,12 @@ label::before {
  *    ##     ## ########  ######  #### ##        ########  ######                                                                 
  */
 
-.card-header-recipes{
+ .columns{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+ .card-header-recipes{
   height: 80px;
 }
 

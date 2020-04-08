@@ -20,19 +20,18 @@ class RecipeDetails extends Component {
   render() {
     const recipe = this.state.recipe;
     return (
-      <>
+      <div>
         <NavBar />
-
         <p className="title is-1 has-text-centered">{recipe.title}</p>
-
-        <div className="recipe">
-
-          <p className="title is-3">Informations</p>
+        <div className="column is-two-thirds">
+          <div class="column is-two-thirds">
+            <p className="title is-3">Informations</p>
             <ul className='informationsRecipe'>
               <li>Servings : {recipe.servings} persons</li>
               <li>Ready in {recipe.readyInMinutes} minutes</li>
               <li>Cooked in {recipe.cookingTime} minutes</li>
             </ul>
+          </div>
           <div className='spaceAround'></div>
           <p className="title is-3 ">Ingredients</p>
             <div className='ingredientsAmountQuantities'>
@@ -41,15 +40,16 @@ class RecipeDetails extends Component {
               <p className='units'>{recipe.unit}</p>
             </div>
           <div className='spaceAround'></div>
-          <p className="title is-3">Instructions</p>
-          <p>{recipe.steps}</p>
-
+          <div class="column">
+            <figure class="image is-128x128">
+              <img src={recipe.image} alt="photo plat"></img>
+            </figure>
+          </div>
         </div>
-
         <Footer />
-
-      </>
+      </div>
     );
+
   }
 }
 
