@@ -64,6 +64,12 @@ __    __    ______   .___  ___.  _______ .______      ___       _______  _______
   padding-top: 30px;
 }
 
+.columns.is-8 :last-child{
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+
 
 /*
  *    #### ##    ##  ######   ########  ######## ########  #### ######## ##    ## ########  ######  
@@ -75,24 +81,24 @@ __    __    ______   .___  ___.  _______ .______      ___       _______  _______
  *    #### ##    ##  ######   ##     ## ######## ########  #### ######## ##    ##    ##     ######                                                                                                   
  */
 
+.title.is-1.has-text-centered{
+  color: #4A8C64;
+  font-family: monospace;
+}
+
 .card-header{
   text-transform: uppercase;
   font-weight : bold;
 }
 
-.card_ingredients {
-  width: 15%;
-  margin-bottom: 15px;
-}
+
 
 .ingredients {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  padding: 15px;
 }
 .card_ingredients {
-  width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,6 +192,10 @@ label::before {
  *     ######  ######## ######## ########  ######     ##    ######## ########  
  */
  
+.spaceAround{
+  height:50px;
+}
+
 .concernedRecipes {
   display: flex;
   flex-flow: row wrap;
