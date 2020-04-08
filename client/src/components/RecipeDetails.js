@@ -35,7 +35,7 @@ class RecipeDetails extends Component {
           <p className="title is-3 ">Ingredients</p>
             <p>{recipe.amount}{recipe.ingredients}{recipe.unit}</p>
 
-          <p className="title is-3 ">Instructions</p>
+          <p className="title is-3">Instructions</p>
           <p>{recipe.steps}</p>
 
         </div>

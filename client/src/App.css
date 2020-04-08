@@ -7,9 +7,19 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Open+Sans&display=swap');
 
 a {text-decoration:inherit; color:inherit;}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /*  ##    ##    ###    ##     ## ########     ###    ########  
 //  ###   ##   ## ##   ##     ## ##     ##   ## ##   ##     ## 
@@ -57,6 +67,13 @@ __    __    ______   .___  ___.  _______ .______      ___       _______  _______
   justify-content: center;
 }
 
+.title{
+  font-family: 'Nova Square', cursive;
+  text-decoration:none;
+  text-decoration:inherit; 
+  color: #4A8C64; 
+}
+
 .img2-homepage{
   max-height: 250px;
   max-width: 400px;
@@ -82,16 +99,16 @@ __    __    ______   .___  ___.  _______ .______      ___       _______  _______
  */
 
 .title.is-1.has-text-centered{
-  color: #4A8C64;
-  font-family: monospace;
+  font-family: 'Nova Square', cursive;
+  text-decoration:none;
+  text-decoration:inherit; 
+  color: #4A8C64; 
 }
 
 .card-header{
   text-transform: uppercase;
   font-weight : bold;
 }
-
-
 
 .ingredients {
   display: flex;
@@ -347,5 +364,6 @@ _______   ______     ______   .___________. _______ .______
   padding-right: 10px;
   padding-top: 10px;
 }
+
 
 

@@ -12,7 +12,7 @@ const Homepage = (props) => {
       <NavBar />
 
       <div className="container has-text-centered">
-        <h1 className="title">
+        <h1 className="title is-1 big-title">
           TARTATOUT
               </h1>
         <h2 className="subtitle">
@@ -49,11 +49,11 @@ const Homepage = (props) => {
           <div><Link to="/recipes">
             <h1>A toi de jouer </h1>
             <img className="img2-homepage" src="../gettyimages-1140410650-612x612.jpg" alt="photo cooking"></img>
-            </Link>
+          </Link>
           </div>
         </div>
       </div>
-      
+
       <Footer />
 
     </>
