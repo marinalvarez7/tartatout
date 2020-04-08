@@ -432,7 +432,10 @@ class Ingredients extends Component {
               <div className="totalCheckbox" >
                 <div className='eachCheckbox'>
                   <input type="checkbox" id={ingredient.name} onChange={this.onToggle.bind(this, index)}></input>
-                  <label for={ingredient.name}><img src={ingredient.image} alt="" /></label>
+                  <label className='cardIngredient' for={ingredient.name}><img src={ingredient.image} alt="" /></label>
+                  <div className="middle">
+                      <div className="hvrbox-text">{ingredient.name}</div>
+                    </div>
                 </div>
               </div>
             </div>

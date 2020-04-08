@@ -51,6 +51,10 @@ body{
   background-color: #4A8C64;
 }
 
+.title.is-1.big-title {
+  color: #4A8C64;
+}
+
 /*
 __    __    ______   .___  ___.  _______ .______      ___       _______  _______ 
 |  |  |  |  /  __  \  |   \/   | |   ____||   _  \    /   \     /  _____||   ____|
@@ -179,10 +183,6 @@ label::before {
   transform: scale(0);
 }
 
-figcaption{
-  text-align: center;
-}
-
 :checked+label {
   border-color: #ddd;
 }
@@ -199,8 +199,28 @@ figcaption{
   z-index: -1;
 }
 
+.eachCheckbox img {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
 
+.eachCheckbox:hover .cardIngredients{
+  opacity: 0.3;
+}
 
+.eachCheckbox .middle{
+  transition: .5s ease;
+  opacity: 0;
+  transform: translate(-5%, -5%);
+  -ms-transform: translate(-5%, -5%);
+  text-align: center;
+}
+
+.eachCheckbox:hover .middle{
+  opacity: 1;
+}
 
 /***
  *     ######  ######## ##       ########  ######  ######## ######## ########  
@@ -257,10 +277,8 @@ figcaption{
 .middle{
   transition: .5s ease;
   opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  transform: translate(-5%, -5%);
+  -ms-transform: translate(-5%, -5%);
   text-align: center;
 }
 
@@ -273,10 +291,11 @@ figcaption{
 }
 
 .hvrbox-text{
-  background-color: #4CAF50;
+  background-color: #4A8C64;
   color: white;
   font-size: 16px;
   padding:5px 18px;
+  font-family: 'Nova Square', cursive;
 }
 
 
@@ -320,6 +339,27 @@ figcaption{
 .recipe{
   padding-left: 50px;
   padding-right: 50px;
+  font-family: 'Nova Square', cursive;
+}
+
+.ingredientsAmountQuantities {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantities {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredientsDetailed {
+  display: flex;
+  flex-direction: column;
+}
+
+.units {
+  display: flex;
+  flex-direction: column;
 }
 
 /*
