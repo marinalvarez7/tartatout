@@ -12,7 +12,7 @@ const Homepage = (props) => {
       <div className="hero-body">
         <div className="container">
           <figure className="image center">
-            <img src="./RNFGG3.jpg" alt="meals"></img>
+            <img src="./RNFGG3.png" alt="meals"></img>
           </figure>
         </div>
       </div>

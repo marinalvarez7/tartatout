@@ -9,7 +9,7 @@ class RecipeDetails extends Component {
   };
   componentDidMount() {
     axios
-      .get(`${process.env.REACT_APP_APIURL || ""}/allrecipe)${this.props.match.params.id}`)
+      .get(`${process.env.MONGODB_URI || ""}/allrecipes/${this.props.match.params.id}`)
       .then((response) => response.data)
       .then((data) => {
         console.log("data", data);
@@ -32,7 +32,7 @@ class RecipeDetails extends Component {
           <p> Ready in {recipe.readyInMinutes} minutes</p>
           <p>Cooked in {recipe.cookingTime} minutes</p>
 
-          <p className="title is-3 ">Ingrédients</p>
+          <p className="title is-3 ">Ingredients</p>
           <p>{recipe.ingredients}</p>
 
           <p className="title is-3 ">Instructions</p>
