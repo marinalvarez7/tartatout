@@ -201,6 +201,7 @@ figcaption{
 
 
 
+
 /***
  *     ######  ######## ##       ########  ######  ######## ######## ########  
  *    ##    ## ##       ##       ##       ##    ##    ##    ##       ##     ## 
@@ -228,10 +229,12 @@ figcaption{
 .recipesDisplayed{
   margin: 0 auto;
   padding: 15px;
+  
 }
 
 .recipesDisplayed p{
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .recipesDisplayed img {
@@ -244,6 +247,37 @@ figcaption{
   justify-content: center;
 } 
 
+.recipesDisplayed img {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.recipesDisplayed:hover .cardRecipes{
+  opacity: 0.3;
+}
+
+.recipesDisplayed:hover .middle{
+  opacity: 1;
+}
+
+.hvrbox-text{
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding:5px 18px;
+}
 
 
 
@@ -257,14 +291,30 @@ figcaption{
  *    ##     ## ########  ######  #### ##        ########  ######                                                                 
  */
 
+<<<<<<< HEAD
  .columns{
   padding-left: 50px;
   padding-right: 50px;
 }
 
  .card-header-recipes{
+=======
+.card-header-recipes{
+>>>>>>> a0fc099f833d16ed145cd23a528304abb4b61ff7
   height: 80px;
 }
+
+.card-column.is-one-quarter{
+  text-align: center;
+}
+
+.card-header.card-header-recipes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 /*
 .______       _______   ______  __  .______    _______     _______   _______ .___________.    ___       __   __          _______.

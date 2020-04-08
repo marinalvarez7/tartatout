@@ -37,12 +37,11 @@ class Recipes extends Component {
 
               <div className="card column is-one-quarter">
                 <div key={recipe._id}>
-
-                  <header class="card-header card-header-recipes"><Link to={`/recipes/${recipe._id}`}>{recipe.title}</Link></header>
-                  <div class="content">
-                    <div class="card-image">
-                      <figure class="image 128x128">
-                        <img src={recipe.image} alt="" />
+                  <header className="card-header card-header-recipes"><Link to={`/recipes/${recipe._id}`}>{recipe.title}</Link></header>
+                  <div className="content">
+                    <div className="card-image">
+                      <figure className="image 128x128">
+                        <Link to={`/recipes/${recipe._id}`}><img  src={recipe.image} alt={recipe.title} /></Link>
                       </figure>
                     </div>
                   </div>

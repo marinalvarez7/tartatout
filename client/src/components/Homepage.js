@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Footer from './Footer';
 import NavBar from './NavBar';
@@ -16,7 +16,7 @@ const Homepage = (props) => {
           TARTATOUT
               </h1>
         <h2 className="subtitle">
-          Libère le potentiel de ton frigo 😋
+          Libère le potentiel de ton frigo <span>😋</span>
               </h2>
       </div>
 

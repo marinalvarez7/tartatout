@@ -432,7 +432,7 @@ class Ingredients extends Component {
               <div className="totalCheckbox" >
                 <div className='eachCheckbox'>
                   <input type="checkbox" id={ingredient.name} onChange={this.onToggle.bind(this, index)}></input>
-                  <label for={ingredient.name}><img src={ingredient.image} alt="" /><figcaption>{ingredient.name}</figcaption></label>
+                  <label for={ingredient.name}><img src={ingredient.image} alt="" /></label>
                 </div>
               </div>
             </div>
@@ -453,10 +453,14 @@ class Ingredients extends Component {
             )
             .map((recipe) => {
               return (
-                <div className=" recipesDisplayed">
-                  <p className="title">{recipe.title}</p>
-                  <Link to={`/recipes/${recipe._id}`}><img className='cardRecipes' src={recipe.image} alt={recipe.title} /></Link>
-                </div>
+                <Link to={`/recipes/${recipe._id}`}>
+                  <div className="recipesDisplayed">
+                    <img className='cardRecipes' src={recipe.image} alt={recipe.title}/>
+                    <div className="middle">
+                      <div className="hvrbox-text">{recipe.title}</div>
+                    </div>
+                  </div>
+                </Link>
               );
             })}
         </div>
