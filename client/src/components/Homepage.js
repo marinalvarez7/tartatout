@@ -38,7 +38,7 @@ const Homepage = (props) => {
         </div>
 
         <div className=" title is-3 column is-one-third">
-          <div><Link to="/allrecipes">
+          <div><Link to="/recipes">
             <h1> Vois ce que tu peux faire</h1>
             <img className="img2-homepage" src="../gettyimages-1159018027-612x612.jpg" alt="help"></img>
           </Link>
@@ -46,7 +46,7 @@ const Homepage = (props) => {
         </div>
 
         <div className="title is-3 column is-one-third">
-          <div><Link to="/allrecipes">
+          <div><Link to="/recipes">
             <h1>A toi de jouer </h1>
             <img className="img2-homepage" src="../gettyimages-1140410650-612x612.jpg" alt="photo cooking"></img>
           </Link>
