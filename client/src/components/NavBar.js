@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import logoTartatout from '../img/logoTartatout.png';
 
@@ -12,7 +12,7 @@ class NavBar extends Component {
           <div className="container">
             <div className="navbar-brand">
               <Link to="/"><img  src={logoTartatout} alt="Logo"/></Link>
-              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <a role="button" class="navbar-burger burger" aria-label="menu" is-active>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>

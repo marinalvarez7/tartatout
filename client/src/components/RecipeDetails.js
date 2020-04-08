@@ -33,7 +33,7 @@ class RecipeDetails extends Component {
           <p>Cooked in {recipe.cookingTime} minutes</p>
 
           <p className="title is-3 ">Ingredients</p>
-          <p>{recipe.ingredients}</p>
+            <p>{recipe.amount}{recipe.ingredients}{recipe.unit}</p>
 
           <p className="title is-3 ">Instructions</p>
           <p>{recipe.steps}</p>
