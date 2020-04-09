@@ -14,7 +14,8 @@ const recipeSchema = new Schema(
       amount: [],
       unit: [],
       steps: [],
-      combinedAmountUnit : [],
+      combinedAmountUnit: [],
+      ingredientsQuantities: [],
 	},
 	{
 		timestamps: {

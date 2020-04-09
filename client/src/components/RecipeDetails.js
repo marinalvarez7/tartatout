@@ -44,8 +44,7 @@ class RecipeDetails extends Component {
               <div className='spaceAround'></div>
                 <p className="title is-3">Ingredients</p>
                   <div className='ingredientsAmountQuantities'>
-                    <div className='quantities'>{recipe.combinedAmountUnit}</div>
-                    <div className='ingredientsDetailed'>{recipe.ingredients}</div>
+                    <div className='quantities'>{recipe.ingredientsQuantities}</div>
                   </div>
               <div className='spaceAround'></div>
                 <p className="title is-3">Instructions</p>
