@@ -361,20 +361,11 @@ label::before {
   flex-direction: column;
 }
 
-.quantities {
-  display: flex;
-  flex-direction: column;
-}
-
 .ingredientsDetailed {
   display: flex;
   flex-direction: column;
 }
 
-.units {
-  display: flex;
-  flex-direction: column;
-}
 
 /*
 _        ______     _______  __  .__   __.         _______. __    _______ .__   __.     __    __  .______   

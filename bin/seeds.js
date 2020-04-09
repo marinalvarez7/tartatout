@@ -44,7 +44,7 @@ const recipes = json.map(complexrecipe => {
   if (complexrecipe.extendedIngredients) {
     amount = complexrecipe.extendedIngredients.map(complexAmount => {
       console.log("coucou", complexAmount.measures.metric.amount)
-      return complexAmount.measures.metric.amount;
+      return complexAmount.measures.metric.amount + " ";
     })
   } else {
     amount = []
@@ -62,6 +62,8 @@ const recipes = json.map(complexrecipe => {
   let ingredientsList = ingredients
     .map((str) => str.split(" "))
     .reduce((acc, it) => [...acc, ...it], []);
+  
+  let combinedAmountUnit = amount.map((e, i) => e + unit[i]);
 
   return {
     title: complexrecipe.title,
@@ -73,8 +75,7 @@ const recipes = json.map(complexrecipe => {
     servings: complexrecipe.servings,
     ingredients: ingredients,
     ingredientsList: ingredientsList,
-    amount: amount,
-    unit: unit
+    combinedAmountUnit : combinedAmountUnit
   }
 });
 
