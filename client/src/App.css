@@ -351,20 +351,38 @@ label::before {
 */
 
 .recipe{
-  padding-left: 50px;
-  padding-right: 50px;
+
   font-family: 'Nova Square', cursive;
+}
+
+.imageRecipeID {
+  
+  display: flex;
+  align-items: center;
+}
+
+.imageRecipeID img{
+  margin: 0 auto;
+  border-radius: 25%;
+}
+
+.column.is-two-thirds{
+  margin: 0 auto;
+  width: none;
 }
 
 .ingredientsAmountQuantities {
   display: flex;
-  flex-direction: column;
+  flex-direction: inherit;
 }
 
-.ingredientsDetailed {
-  display: flex;
-  flex-direction: column;
+/* .ingredientsDetailed {
+  display: table-row;
 }
+
+.quantities{
+  display: table-row;
+} */
 
 
 /*

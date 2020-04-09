@@ -17,35 +17,41 @@ class RecipeDetails extends Component {
       })
       .catch((err) => (err) => console.log(err));
   }
+
+  
   render() {
     const recipe = this.state.recipe;
+
+    // const listIngredients = recipe.ingredients;
+    // listIngredients.mcap(item => console.log(item + "<br>"))
+    
     return (
       <div>
         <NavBar />
-        <div class="column">
-            <figure class="image is-128x128">
-              <img src={recipe.image} alt="photo plat"></img>
-            </figure>
-          </div>
-        <p className="title is-1 has-text-centered">{recipe.title}</p>
-        <div className="column is-two-thirds">
-          <div class="column is-two-thirds">
-            <p className="title is-3">Informations</p>
-            <ul className='informationsRecipe'>
-              <li>Servings : {recipe.servings} persons</li>
-              <li>Ready in {recipe.readyInMinutes} minutes</li>
-              <li>Cooked in {recipe.cookingTime} minutes</li>
-            </ul>
-          </div>
+        <div className="column">
+          <figure className="imageRecipeID">
+            <img src={recipe.image} alt="photo plat"></img>
+          </figure>
           <div className='spaceAround'></div>
-          <p className="title is-3 ">Ingredients</p>
-            <div className='ingredientsAmountQuantities'>
-              <p className='quantities'>{recipe.combinedAmountUnit}</p>
-              <p className='ingredientsDetailed'>{recipe.ingredients}</p>
+          <p className="title is-1 has-text-centered">{recipe.title}</p>
+            <div className="column is-two-thirds">
+                <p className="title is-3">Informations</p>
+                  <ul className='informationsRecipe'>
+                    <li>Servings : {recipe.servings} persons</li>
+                    <li>Ready in {recipe.readyInMinutes} minutes</li>
+                    <li>Cooked in {recipe.cookingTime} minutes</li>
+                  </ul>
+              <div className='spaceAround'></div>
+                <p className="title is-3">Ingredients</p>
+                  <div className='ingredientsAmountQuantities'>
+                    <div className='quantities'>{recipe.combinedAmountUnit}</div>
+                    <div className='ingredientsDetailed'>{recipe.ingredients}</div>
+                  </div>
+              <div className='spaceAround'></div>
+                <p className="title is-3">Instructions</p>
+                  <p>{recipe.steps}</p>
+                  <div className='spaceAround'></div>
             </div>
-          <div className='spaceAround'></div>
-          <p className="title is-3 ">Instructions</p>
-           <p>{recipe.steps}</p>
         </div>
         <Footer />
       </div>

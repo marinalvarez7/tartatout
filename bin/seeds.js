@@ -64,6 +64,7 @@ const recipes = json.map(complexrecipe => {
     .reduce((acc, it) => [...acc, ...it], []);
   
   let combinedAmountUnit = amount.map((e, i) => e + unit[i]);
+  let ingredientsQuantities = combinedAmountUnit.map((e, i) => e + + " "  + ingredients[i]);
 
   return {
     title: complexrecipe.title,
@@ -75,7 +76,7 @@ const recipes = json.map(complexrecipe => {
     servings: complexrecipe.servings,
     ingredients: ingredients,
     ingredientsList: ingredientsList,
-    combinedAmountUnit : combinedAmountUnit
+    combinedAmountUnit : combinedAmountUnit + " ",
   }
 });
 
