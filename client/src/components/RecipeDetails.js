@@ -22,6 +22,11 @@ class RecipeDetails extends Component {
     return (
       <div>
         <NavBar />
+        <div class="column">
+            <figure class="image is-128x128">
+              <img src={recipe.image} alt="photo plat"></img>
+            </figure>
+          </div>
         <p className="title is-1 has-text-centered">{recipe.title}</p>
         <div className="column is-two-thirds">
           <div class="column is-two-thirds">
@@ -40,11 +45,8 @@ class RecipeDetails extends Component {
               <p className='units'>{recipe.unit}</p>
             </div>
           <div className='spaceAround'></div>
-          <div class="column">
-            <figure class="image is-128x128">
-              <img src={recipe.image} alt="photo plat"></img>
-            </figure>
-          </div>
+          <p className="title is-3 ">Instructions</p>
+           <p>{recipe.steps}</p>
         </div>
         <Footer />
       </div>

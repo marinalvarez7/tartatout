@@ -55,6 +55,11 @@ body{
   color: #4A8C64;
 }
 
+.title.is-3.column.is-one-third h1{
+  color: #4A8C64;
+}
+
+
 /*
 __    __    ______   .___  ___.  _______ .______      ___       _______  _______ 
 |  |  |  |  /  __  \  |   \/   | |   ____||   _  \    /   \     /  _____||   ____|
@@ -321,6 +326,8 @@ label::before {
 
 .card-column.is-one-quarter{
   text-align: center;
+  color: #4A8C64;
+
 }
 
 .card-header.card-header-recipes{
@@ -328,7 +335,9 @@ label::before {
   align-items: center;
   justify-content: center;
 }
-
+.card-header.card-header-recipes a{
+  color: #4A8C64;
+}
 
 
 /*
